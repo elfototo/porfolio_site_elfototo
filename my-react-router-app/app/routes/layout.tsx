@@ -11,7 +11,7 @@ export default function Component () {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-amber-200 text-gray-800 ">
+    <div className="flex flex-col min-h-screen bg-white text-gray-800 ">
       {/* Навигация */}
       <header className="text-xl font-bold">
         <nav className="container mx-auto px-8 py-8 flex justify-center items-center">
@@ -20,8 +20,8 @@ export default function Component () {
               <li key={link.to}>
                 <Link
                   to={link.to}
-                  className={`hover:text-amber-600 transition ${
-                    location.pathname === link.to ? "text-amber-600" : ""
+                  className={`hover:text-yellow-500 transition duration-500 ease-in-out ${
+                    location.pathname === link.to ? "text-yellow-500" : ""
                   }`}
                 >
                   {link.label}
