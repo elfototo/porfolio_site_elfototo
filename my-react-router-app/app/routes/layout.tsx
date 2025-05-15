@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router";
 
-export default function Component () {
+export default function Component() {
   const location = useLocation();
 
   const navLinks = [
@@ -11,9 +11,14 @@ export default function Component () {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gray-800 ">
+    <div className="flex flex-col bg-white text-gray-800 relative w-full h-screen overflow-x-hidden">
+      <div className="absolute inset-0 flex">
+        <div className="w-[65%] bg-white h-screen"></div>
+        <div className="w-[35%] bg-yellow-500 h-screen"></div>
+      </div>
+    
       {/* Навигация */}
-      <header className="text-xl font-bold">
+      <header className="text-xl font-bold relative z-10">
         <nav className="container mx-auto px-8 py-8 flex justify-center items-center">
           <ul className="flex gap-6">
             {navLinks.map((link) => (
@@ -33,7 +38,7 @@ export default function Component () {
       </header>
 
       {/* Контент */}
-      <main className="flex-1 container mx-auto px-4 py-10">
+      <main className="flex-1 w-screen z-10 mx-auto">
         <Outlet />
       </main>
 
@@ -43,4 +48,4 @@ export default function Component () {
       </footer>
     </div>
   );
-};
+}
