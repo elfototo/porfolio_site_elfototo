@@ -11,10 +11,10 @@ export default function Component() {
   ];
 
   return (
-    <div className="flex flex-col bg-white text-gray-800 relative w-full h-screen overflow-x-hidden">
+    <div className="flex flex-col bg-white text-gray-700 relative w-full min-h-screen overflow-x-hidden">
       <div className="absolute inset-0 flex">
-        <div className="w-[65%] bg-white h-screen"></div>
-        <div className="w-[35%] bg-yellow-500 h-screen"></div>
+        <div className="md:w-[65%] w-ful bg-white h-screen"></div>
+        <div className="md:w-[35%] w-0 md:bg-yellow-400 h-screen"></div>
       </div>
     
       {/* Навигация */}
