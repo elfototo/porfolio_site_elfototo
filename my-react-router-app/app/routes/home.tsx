@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { PiDevicesFill } from "react-icons/pi";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -43,9 +44,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* md:block hidden flex flex-col z-20 md:w-[40%] w-full md:mr-10 mr-0 lg:mt-20 mt-10 xl:ml-40 lg:ml-10 ml-0 */}
             {/* Deckstop */}
-            <div className="md:block hidden flex flex-col z-20 md:w-[50%] w-[50%] w-full md:mr-10 mr-0 lg:mt-20 mt-10 xl:ml-40 lg:ml-10">
+            <div className="md:block hidden flex flex-col z-20 xl:w-[40%] md:w-[50%] w-[50%] w-full md:mr-10 mr-0 xl:mt-30 lg:mt-20 mt-10 xl:ml-45 lg:ml-10">
               <p className="text-xl leading-none font-semibold mb-4">
                 Hello, I'm a
               </p>
@@ -61,10 +61,6 @@ export default function Home() {
                 <button className="h-auto py-4 px-8 cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-lg mr-4 transition duration-300">
                   Download CV
                 </button>
-
-                {/* <button className="w-3/4 h-[50px] border cursor-pointer border-yellow-400 text-yellow-400 hover:border-yellow-500 font-semibold rounded-lg transition duration-300">
-                  Write me
-                </button> */}
               </div>
             </div>
             {/* Deckstop */}
@@ -112,10 +108,17 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="bg-[#334155] w-full h-[600px] relative z-10">
-          <div className=" px-4 container mx-auto flex flex-wrap justify-center items-center h-full">
-            <div className="md:block hidden relative bg-yellow-400 w-[300px] h-[400px] mr-10">
-              {/* <img src="" alt="image" className="" /> */}
+        <div className="bg-[#334155] w-full h-full relative z-10">
+          <div className="px-4 py-10 container mx-auto flex flex-wrap justify-center items-center h-full">
+            <div className="md:block hidden relative w-[300px] h-[400px] mr-10">
+              <img
+                src="/about.webp"
+                alt="image"
+                className="w-[500px] h-auto"
+                style={{
+                  filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))",
+                }}
+              />
             </div>
             <div className="md:w-[50%] w-full">
               <h1 className="text-white text-5xl font-bold mb-10">About me</h1>
@@ -132,8 +135,12 @@ export default function Home() {
               </p>
             </div>
             {/* mobile */}
-            <div className="md:hidden  relative bg-yellow-400 w-full h-[200px]">
-              {/* <img src="" alt="image" className="" /> */}
+            <div className="md:hidden mx-auto relative w-full h-full mt-8">
+              <img
+                src="/about_mobile.webp"
+                alt="image"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -142,22 +149,50 @@ export default function Home() {
 
       {/* Block 3 */}
 
-      <div className="bg-white h-[500px] relative w-full">
-        <div className="container mx-auto flex h-full justify-center items-center">
-          <div className="absolute w-full flex flex-col justify-center items-center -top-60 z-20 ">
+      <div className="bg-white min-h-[1000px] md:min-h-[500px] relative w-full">
+        <div className="container mx-auto flex h-full justify-center items-center ">
+          <div className="absolute w-full flex flex-col justify-center items-center -top-60 z-20 px-4">
             <h1 className="text-white text-5xl font-bold mb-10">Services</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 w-full container">
-              <div className="w-full h-[300px] bg-yellow-400 flex justify-center items-center text-white text-2xl">
-                Servece
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 my-4 w-full container">
+              <div className="w-full h-full bg-yellow-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300">
+                <PiDevicesFill size={70} />
+                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
+                <div className="">
+                  <p className="text-lg">
+                    Создаю адаптивные веб-приложения с использованием
+                    React/Next.js/React Router и интеграцией с API.
+                  </p>
+                </div>
               </div>
-              <div className="w-full h-[300px] bg-yellow-400  flex justify-center items-center text-white text-2xl">
-                Servece
+              <div className="w-full h-full bg-fuchsia-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2  transform transition-all duration-300">
+                <PiDevicesFill size={70} />
+                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
+                <div className="">
+                  <p className="text-lg">
+                    Создаю адаптивные веб-приложения с использованием
+                    React/Next.js/React Router и интеграцией с API.
+                  </p>
+                </div>
               </div>
-              <div className="w-full h-[300px] bg-yellow-400  flex justify-center items-center text-white text-2xl">
-                Servece
+              <div className="w-full h-full bg-green-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2  transform transition-all duration-300">
+                <PiDevicesFill size={70} />
+                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
+                <div className="">
+                  <p className="text-lg">
+                    Создаю адаптивные веб-приложения с использованием
+                    React/Next.js/React Router и интеграцией с API.
+                  </p>
+                </div>
               </div>
-              <div className="w-full h-[300px] bg-yellow-400  flex justify-center items-center text-white text-2xl">
-                Servece
+              <div className="w-full h-full bg-cyan-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2  transform transition-all duration-300">
+                <PiDevicesFill size={70} />
+                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
+                <div className="">
+                  <p className="text-lg">
+                    Создаю адаптивные веб-приложения с использованием
+                    React/Next.js/React Router и интеграцией с API.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
