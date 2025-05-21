@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
-import { PiDevicesFill } from "react-icons/pi";
+import Services from "../components/services";
+import MainButton from "../components/mainButton";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,79 +11,65 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="">
+    <>
       {/* Block 1 */}
-      <div>
-        <div>
-          <div className="flex flex-col md:flex-row justify-center md:justify-around mx-auto container px-4 py-10 lg:py-0 ">
-            {/* Mobile images*/}
-            <div className="block md:hidden flex items-center justify-center">
-              <div className="bg-yellow-400 relative w-50 h-50 rounded-full overflow-hidden shadow-xl border-4 border-white">
-                <img
-                  src="/main_photo.webp"
-                  alt="Avatar"
-                  className="absolute top-2 left-0 w-full h-auto object-cover z-10"
-                />
-              </div>
-            </div>
-            {/* Mobile */}
-            <div className="md:hidden flex justify-center items-center flex-col z-20 w-full mt-8">
-              <h2 className="text-xl leading-none font-semibold mb-2">
-                Hello, I'm a{" "}
-                <span className="text-yellow-400 underline">
-                  Frontend developer.
-                </span>{" "}
-              </h2>
-              <h2 className="text-xl leading-none font-semibold mb-4">
-                My name is Elizaveta
-              </h2>
 
-              <div className="flex">
-                <button className="h-auto py-4 px-8 cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-lg mr-4 transition duration-300">
-                  Download CV
-                </button>
-              </div>
-            </div>
-
-            {/* Deckstop */}
-            <div className="md:block hidden flex flex-col z-20 xl:w-[40%] md:w-[50%] w-[50%] w-full md:mr-10 mr-0 xl:mt-30 lg:mt-20 mt-10 xl:ml-45 lg:ml-10">
-              <p className="text-xl leading-none font-semibold mb-4">
-                Hello, I'm a
-              </p>
-              <h1 className="text-[50px] leading-none font-bold mb-8">
-                <span className="text-gray-700">Frontend </span>
-                <span className="text-yellow-400 underline">developer.</span>
-              </h1>
-              <p className="text-xl leading-none font-semibold mb-8">
-                My name is <span className="">Elizaveta Davydova</span>. Welcome
-                to my website. Here I'm posting my experience and last projects.
-              </p>
-              <div className="flex">
-                <button className="h-auto py-4 px-8 cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-lg mr-4 transition duration-300">
-                  Download CV
-                </button>
-              </div>
-            </div>
-            {/* Deckstop */}
-            <div className="md:block hidden relative lg:w-[600px] w-[500px] lg:h-[600px]">
-              <img
-                src="/main_photo.webp"
-                alt="Background image"
-                loading="eager"
-                className="absolute lg:-bottom-10 -bottom-30 xl:-left-10 lg:left-0 w-auto lg:h-[600px] h-[500px] object-contain right-0"
-                style={{
-                  filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))",
-                }}
-              />
-            </div>
+      <div className="flex flex-col md:flex-row justify-center md:justify-around mx-auto container px-4 py-10 lg:py-0 ">
+        {/* Mobile*/}
+        <div className="block md:hidden flex items-center justify-center">
+          <div className="bg-yellow-400 relative w-50 h-50 rounded-full overflow-hidden shadow-xl border-4 border-white">
+            <img
+              src="/main_photo.webp"
+              alt="Avatar"
+              className="absolute top-2 left-0 w-full h-auto object-cover z-10"
+            />
           </div>
+        </div>
+        <div className="md:hidden flex justify-center items-center flex-col z-20 w-full mt-8">
+          <h2 className="text-xl leading-none font-semibold mb-2">
+            Hello, I'm a{" "}
+            <span className="text-yellow-400 underline">
+              Frontend developer.
+            </span>{" "}
+          </h2>
+          <h2 className="text-xl leading-none font-semibold mb-4">
+            My name is Elizaveta
+          </h2>
+          <MainButton value="Download CV" />
+        </div>
+
+        {/* Deckstop */}
+        <div className="md:block hidden flex flex-col z-20 xl:w-[40%] md:w-[50%] w-[50%] w-full md:mr-10 mr-0 xl:mt-30 lg:mt-20 mt-10 xl:ml-45 lg:ml-10">
+          <p className="text-xl leading-none font-semibold mb-4">
+            Hello, I'm a
+          </p>
+          <h1 className="text-[50px] leading-none font-bold mb-8">
+            <span className="text-gray-700">Frontend </span>
+            <span className="text-yellow-400 underline">developer.</span>
+          </h1>
+          <p className="text-xl leading-none font-semibold mb-8">
+            My name is <span className="">Elizaveta Davydova</span>. Welcome to
+            my website. Here I'm posting my experience and last projects.
+          </p>
+          <MainButton value="Download CV" />
+        </div>
+        <div className="md:block hidden relative lg:w-[600px] w-[500px] lg:h-[600px]">
+          <img
+            src="/main_photo.webp"
+            alt="Background image"
+            loading="eager"
+            className="absolute lg:-bottom-10 -bottom-30 xl:-left-10 lg:left-0 w-auto lg:h-[600px] h-[500px] object-contain right-0"
+            style={{
+              filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))",
+            }}
+          />
         </div>
       </div>
 
       {/* Block 2 */}
 
       <div className="relative text-white w-full">
-        {/* Wave */}
+        {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -93,7 +80,7 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* mobile */}
+        {/* Mobile wave*/}
         <div className="absolute -top-35 md:hidden block w-full z-0 overflow-hidden">
           <svg
             className="h-[200px] w-full"
@@ -108,9 +95,12 @@ export default function Home() {
           </svg>
         </div>
 
+        {/* Border up*/}
         <div className="bg-[#334155] w-full h-full relative z-10">
-          <div className="px-4 py-10 container mx-auto flex flex-wrap justify-center items-center h-full">
+          {/* Content */}
+          <div className="container px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
             <div className="md:block hidden relative w-[300px] h-[400px] mr-10">
+              {/* deckstop img */}
               <img
                 src="/about.webp"
                 alt="image"
@@ -134,7 +124,8 @@ export default function Home() {
                 applications.
               </p>
             </div>
-            {/* mobile */}
+
+            {/* mobile img*/}
             <div className="md:hidden mx-auto relative w-full h-full mt-8">
               <img
                 src="/about_mobile.webp"
@@ -144,60 +135,18 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Border down*/}
         <div className="bg-[#334155] w-full h-[300px] z-10"></div>
       </div>
 
       {/* Block 3 */}
-
       <div className="bg-white min-h-[1000px] md:min-h-[500px] relative w-full">
         <div className="container mx-auto flex h-full justify-center items-center ">
           <div className="absolute w-full flex flex-col justify-center items-center -top-60 z-20 px-4">
-            <h1 className="text-white text-5xl font-bold mb-10">Services</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 my-4 w-full container">
-              <div className="w-full h-full bg-yellow-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300">
-                <PiDevicesFill size={70} />
-                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
-                <div className="">
-                  <p className="text-lg">
-                    Создаю адаптивные веб-приложения с использованием
-                    React/Next.js/React Router и интеграцией с API.
-                  </p>
-                </div>
-              </div>
-              <div className="w-full h-full bg-fuchsia-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2  transform transition-all duration-300">
-                <PiDevicesFill size={70} />
-                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
-                <div className="">
-                  <p className="text-lg">
-                    Создаю адаптивные веб-приложения с использованием
-                    React/Next.js/React Router и интеграцией с API.
-                  </p>
-                </div>
-              </div>
-              <div className="w-full h-full bg-green-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2  transform transition-all duration-300">
-                <PiDevicesFill size={70} />
-                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
-                <div className="">
-                  <p className="text-lg">
-                    Создаю адаптивные веб-приложения с использованием
-                    React/Next.js/React Router и интеграцией с API.
-                  </p>
-                </div>
-              </div>
-              <div className="w-full h-full bg-cyan-500 flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2  transform transition-all duration-300">
-                <PiDevicesFill size={70} />
-                <h1 className="font-bold mb-4">Разработка интерфейсов</h1>
-                <div className="">
-                  <p className="text-lg">
-                    Создаю адаптивные веб-приложения с использованием
-                    React/Next.js/React Router и интеграцией с API.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Services />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
