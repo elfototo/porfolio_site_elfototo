@@ -13,3 +13,21 @@ body {
     color-scheme: dark;
   }
 }
+
+.swiper-button-disabled {
+  --swiper-navigation-size: 40px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #334155;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 40px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #334155;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color:  #eab308;
+}

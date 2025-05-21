@@ -1,4 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router";
+import "swiper/css/bundle";
+import "../app.css";
 
 export default function Component() {
   const location = useLocation();

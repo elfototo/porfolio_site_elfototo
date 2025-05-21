@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import Services from "../components/services";
 import MainButton from "../components/mainButton";
+import Technologies from "../components/technologies";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
-      {/* Block 1 */}
+      {/* Block Main */}
 
       <div className="flex flex-col md:flex-row justify-center md:justify-around mx-auto container px-4 py-10 lg:py-0 ">
         {/* Mobile*/}
@@ -66,9 +67,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Block 2 */}
+      {/* Block About */}
 
-      <div className="relative text-white w-full">
+      <div className="relative   text-white w-full">
         {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -139,12 +140,19 @@ export default function Home() {
         <div className="bg-[#334155] w-full h-[300px] z-10"></div>
       </div>
 
-      {/* Block 3 */}
-      <div className="bg-white min-h-[1000px] md:min-h-[500px] relative w-full">
+      {/* Block Services */}
+      <div className="bg-white min-h-[1000px] md:min-h-[500px] lg:min-h-[450px] xl:min-h-[250px] relative w-full mb-10">
         <div className="container mx-auto flex h-full justify-center items-center ">
           <div className="absolute w-full flex flex-col justify-center items-center -top-60 z-20 px-4">
             <Services />
           </div>
+        </div>
+      </div>
+
+      {/* Block Technologies */}
+      <div className="bg-white h-full w-full mb-10">
+        <div className="container mx-auto h-full justify-center items-center">
+          <Technologies />
         </div>
       </div>
     </>
