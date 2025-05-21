@@ -53,7 +53,7 @@ export default function ServiceCard({ value }: { value: string }) {
   return (
     <>
       <div
-        className={`${curentService.color} w-full h-full flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300`}
+        className={`${curentService.color} w-full h-full flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 cursor-default`}
       >
         {curentService.icon}
         <h1 className="font-bold mb-4">{curentService.title}</h1>
