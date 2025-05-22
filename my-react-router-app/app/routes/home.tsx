@@ -3,6 +3,7 @@ import Services from "../components/services";
 import MainButton from "../components/mainButton";
 import Technologies from "../components/technologies";
 import Projects from "../components/projects";
+import Skills from "../components/skills";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -156,11 +157,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-gray-700 h-[500px] w-full my-10">
+      <div className="relative bg-gray-700 h-[500px] w-full my-10">
         <div className="container mx-auto h-full justify-center items-center py-10">
-          <h1 className="text-white text-5xl font-bold mb-10 flex items-center justify-center">
-            Skills
-          </h1>
+          <Skills/>
         </div>
       </div>
 
