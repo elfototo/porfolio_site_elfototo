@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import Services from "../components/services";
 import MainButton from "../components/mainButton";
 import Technologies from "../components/technologies";
+import Projects from "../components/projects";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,7 +15,6 @@ export default function Home() {
   return (
     <>
       {/* Block Main */}
-
       <div className="flex flex-col md:flex-row justify-center md:justify-around mx-auto container px-4 py-10 lg:py-0 ">
         {/* Mobile*/}
         <div className="block md:hidden flex items-center justify-center">
@@ -69,7 +69,7 @@ export default function Home() {
 
       {/* Block About */}
 
-      <div className="relative   text-white w-full">
+      <div className="relative text-white w-full">
         {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
 
         {/* Border up*/}
-        <div className="bg-[#334155] w-full h-full relative z-10">
+        <div className=" relative bg-[#334155] w-full h-full relative z-10">
           {/* Content */}
           <div className="container px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
             <div className="md:block hidden relative w-[300px] h-[400px] mr-10">
@@ -153,6 +153,21 @@ export default function Home() {
       <div className="bg-white h-full w-full mb-10">
         <div className="container mx-auto h-full justify-center items-center">
           <Technologies />
+        </div>
+      </div>
+
+      <div className="bg-gray-700 h-[500px] w-full my-10">
+        <div className="container mx-auto h-full justify-center items-center py-10">
+          <h1 className="text-white text-5xl font-bold mb-10 flex items-center justify-center">
+            Skills
+          </h1>
+        </div>
+      </div>
+
+      {/* Block Projects */}
+      <div className="bg-white h-full w-full mb-10">
+        <div className="container mx-auto h-full justify-center items-center">
+          <Projects />
         </div>
       </div>
     </>
