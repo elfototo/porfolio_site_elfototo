@@ -41,7 +41,7 @@ export default function Component() {
       </header>
 
       {/* Контент */}
-      <main className="flex-1 w-screen z-10 mx-auto">
+      <main className="flex-1 w-screen mx-auto">
         <Outlet />
       </main>
 

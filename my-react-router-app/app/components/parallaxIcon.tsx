@@ -25,12 +25,13 @@ export default function ParallaxIcon({
       <img
         src={src}
         alt="Parallax Icon"
-        className={`absolute ${className}`}
+        className={`absolute z-20 ${className}`}
         style={{
           transform: `translateY(${offset * (speed / 100)}px) scale(${
             1 + offset / 10000
-          }) rotate(${offset / 30}deg)`,
+          }) rotate(${offset / 40}deg)`,
           transition: "transform 0.1s ease-out, opacity 0.3s ease",
+          filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))",
         }}
       />
     </>

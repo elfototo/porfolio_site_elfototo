@@ -17,7 +17,13 @@ export default function Home() {
   return (
     <>
       {/* Block Main */}
-      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between mx-auto container max-w-[1200px] px-4">
+      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between mx-auto container max-w-[1200px] px-4 pb-10 md:pb-0">
+        {/* bg img */}
+        <img
+          src={"/bg.webp"}
+          alt="bg"
+          className="absolute z-0 xl:-top-[9%] lg:-top-[5%] -top-[4%] xl:-right-[15%] lg:-right-[10%] -right-[13%] opacity-100 xl:w-[1000px] lg:w-[800px] w-[600px]"
+        />
         {/* Mobile*/}
         <div className="block md:hidden flex items-center justify-center">
           <div className="bg-yellow-400 relative w-50 h-50 rounded-full overflow-hidden shadow-xl border-4 border-white">
@@ -42,8 +48,7 @@ export default function Home() {
         </div>
 
         {/* Deckstop */}
-        {/* md:block hidden flex flex-col z-20 xl:w-[40%] md:w-[50%] w-[50%] w-full md:mr-10 mr-0 xl:mt-30 lg:mt-20 mt-10 xl:ml-45 lg:ml-10 */}
-        <div className="md:block hidden flex flex-col z-20 xl:w-[40%] md:w-[50%] w-[50%] h-full md:mr-10 mr-0">
+        <div className="md:block hidden flex flex-col z-20 xl:w-[50%] md:w-[50%] w-[50%] h-full mr-0 pb-10">
           <p className="text-xl leading-none font-semibold mb-4">
             Hello, I'm a
           </p>
@@ -57,69 +62,49 @@ export default function Home() {
           </p>
           <MainButton value="Download CV" />
         </div>
-        {/* <div className="md:block hidden relative lg:w-[600px] w-[500px] lg:h-[600px]">
-          <img
-            src="/main_photo.webp"
-            alt="Background image"
-            loading="eager"
-            className="absolute lg:-bottom-10 -bottom-30 xl:-left-10 lg:left-0 w-auto lg:h-[600px] h-[500px] object-contain right-0"
-            style={{
-              filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))",
-            }}
-          />
-        </div> */}
 
-        <div className="md:block flex mx-auto hidden relative w-[70%] lg:w-[70%] overflow-visible lg:h-[37rem] h-[30rem] z-0">
+        <div className="md:block flex mx-auto hidden relative w-[70%] lg:w-[70%] overflow-visible lg:h-[37rem] h-[30rem]">
           <img
             src="/main_photo.webp"
             alt="Background image"
             loading="eager"
             className="object-contain absolute -bottom-[2.5rem] lg:bottom-0 lg:-right-0 xl:right-0 w-full lg:h-[37rem] h-[32rem] z-0"
-            // style={{
-            //   filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))",
-            // }}
           />
           <ParallaxIcon
             src="/icon_5.webp"
             speed={10}
-            className="top-1/8 left-0 w-[150px] z-10"
+            className="top-1/8 left-0 lg:w-[150px] w-[120px] z-10"
           />
           <ParallaxIcon
             src="/icon_4.webp"
             speed={10}
-            className="top-1/2 right-1/7 w-[140px] z-10"
+            className="top-1/2 right-1/7 lg:w-[140px] w-[110px] z-20"
           />
           <ParallaxIcon
             src="/icon_6.webp"
             speed={-10}
-            className="bottom-1/7 left-1/5 w-[150px] z-10"
+            className="bottom-1/7 left-1/5 lg:w-[150px] w-[110px] z-20 "
           />
           <ParallaxIcon
             src="/icon_1.webp"
             speed={-20}
-            className="-top-1/10 right-1/7 w-[170px] z-10"
-          />
-          {/* <ParallaxIcon
-            src="/icon_2.webp"
-            speed={-20}
-            className="top-1/5 rotate-20 right-1/7 h-[150px] z-10"
-          /> */}
-          <ParallaxIcon
-            src="/icon_3.webp"
-            speed={5}
-            className="top-1/5 right-1/7 w-[50px] z-10"
+            className="-top-1/10 right-1/7 lg:w-[170px] w-[120px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={5}
-            className="bottom-1/3 left-1/7 w-[50px] z-10"
+            className="top-1/5 right-1/7 lg:w-[50px] w-[40px] z-20"
+          />
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={5}
+            className="bottom-1/3 left-1/9 lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={-5}
-            className="top-0 left-1/4 w-[50px] z-10"
+            className="blur-2xl top-0 left-1/4 lg:w-[50px] w-[40px] z-20"
           />
-          
         </div>
       </div>
 
@@ -153,18 +138,15 @@ export default function Home() {
         </div>
 
         {/* Border up*/}
-        <div className=" relative bg-[#334155] w-full h-full relative z-10">
+        <div className="relative bg-[#334155] w-full h-full relative z-10">
           {/* Content */}
           <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
             <div className="md:block hidden relative w-[300px] h-[400px] mr-10">
               {/* deckstop img */}
-              <img
+              <ParallaxIcon
                 src="/about.webp"
-                alt="image"
-                className="w-[500px] h-auto"
-                style={{
-                  filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))",
-                }}
+                speed={-5}
+                className="top-0 right-0 w-[500px] z-10"
               />
             </div>
             <div className="md:w-[50%] w-full">
@@ -192,14 +174,68 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Border down*/}
-        <div className="bg-[#334155] w-full h-[300px] z-10"></div>
+      </div>
+
+      {/* Block Skills */}
+      <div className="relative bg-white h-[900px] w-full py-10">
+        {/* Deckstop Wawe*/}
+        <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,213.3C672,192,768,96,864,96C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        {/* Mobile wawe*/}
+        <div className="absolute rotate-180 -top-16 md:hidden block w-full z-0 overflow-hidden">
+          <svg
+            className="h-[200px] w-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,224L120,197.3C240,171,480,117,720,90.7C960,64,1200,64,1320,64L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap h-full w-full z-10">
+          <Skills />
+        </div>
       </div>
 
       {/* Block Services */}
-      <div className="bg-white min-h-[1000px] md:min-h-[500px] lg:min-h-[450px] relative w-full mb-10">
+      <div className="bg-gray-700 min-h-[1000px] md:min-h-[500px] lg:min-h-[450px] relative w-full mb-10">
+        {/*Deckstop wave */}
+        <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,128L26.7,106.7C53.3,85,107,43,160,58.7C213.3,75,267,149,320,154.7C373.3,160,427,96,480,69.3C533.3,43,587,53,640,69.3C693.3,85,747,107,800,122.7C853.3,139,907,149,960,149.3C1013.3,149,1067,139,1120,122.7C1173.3,107,1227,85,1280,64C1333.3,43,1387,21,1413,10.7L1440,0L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        {/* Mobile wave*/}
+        <div className="absolute -top-35 md:hidden block w-full z-0 overflow-hidden">
+          <svg
+            className="h-[200px] w-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,224L120,197.3C240,171,480,117,720,90.7C960,64,1200,64,1320,64L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+
         <div className="container max-w-[1200px] mx-auto flex h-full justify-center items-center">
-          <div className="absolute w-full flex flex-col justify-center items-center -top-60 z-20 px-4">
+          <div className=" w-full flex flex-col justify-center items-center -top-60 z-20 px-4">
             <Services />
           </div>
         </div>
@@ -209,12 +245,6 @@ export default function Home() {
       <div className="bg-white h-full w-full mb-10">
         <div className="container max-w-[1200px] mx-auto h-full justify-center items-center">
           <Technologies />
-        </div>
-      </div>
-
-      <div className="relative bg-gray-700 h-[500px] w-full my-10">
-        <div className="container max-w-[1200px] mx-auto h-full justify-center items-center py-10">
-          <Skills />
         </div>
       </div>
 
