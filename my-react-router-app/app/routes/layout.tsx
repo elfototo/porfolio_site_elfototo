@@ -14,14 +14,15 @@ export default function Component() {
 
   return (
     <div className="flex flex-col bg-white text-gray-700 relative w-full min-h-screen overflow-x-hidden">
-      <div className="absolute inset-0 flex">
-        <div className="md:w-[65%] w-ful bg-white h-screen"></div>
-        <div className="md:w-[35%] w-0 md:bg-yellow-400 h-screen"></div>
+        {/* absolute inset-0 flex */}
+      <div className="">
+        {/* <div className="md:w-[65%] w-ful bg-white h-screen"></div>
+        <div className="md:w-[35%] w-0 md:bg-yellow-400 h-screen"></div> */}
       </div>
-    
+
       {/* Навигация */}
       <header className="text-xl font-bold relative z-10">
-        <nav className="container mx-auto px-8 py-8 flex justify-center items-center">
+        <nav className="container max-w-[1200px] mx-auto px-8 py-8 flex justify-center items-center">
           <ul className="flex gap-6">
             {navLinks.map((link) => (
               <li key={link.to}>

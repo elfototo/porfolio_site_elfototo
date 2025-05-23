@@ -128,9 +128,10 @@ export default function ProjectCard({ idCard }: { idCard: number }) {
           <div className="flex flex-wrap gap-4 mt-10">
             {technologies.map((item) => (
               <div
+                key ={item.title}
                 className={` text-white bg-gray-400 flex items-center gap-2 px-4 py-1 cursor-default`}
               >
-                <span>{item.icon}</span>
+                {/* <span>{item.icon}</span> */}
                 <span>{item.title}</span>
               </div>
             ))}
