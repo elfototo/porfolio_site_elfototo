@@ -7,7 +7,7 @@ export default function Projects() {
       <h1 className="text-gray-700 text-5xl font-bold mb-10 flex items-center justify-center">
         Latest projects
       </h1>
-      <div className="container p-2">
+      <div className="p-2">
         <ProjectCard idCard={1}/>
       </div>
     </>

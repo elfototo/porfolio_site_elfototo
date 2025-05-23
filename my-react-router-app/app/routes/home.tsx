@@ -177,7 +177,7 @@ export default function Home() {
       </div>
 
       {/* Block Skills */}
-      <div className="relative bg-white h-[900px] w-full py-10">
+      <div className="relative bg-white h-full w-full">
         {/* Deckstop Wawe*/}
         <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -202,7 +202,7 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap h-full w-full z-10">
+        <div className="container max-w-[1200px] px-4 py-[300px] xl:py-[400px] mx-auto flex items-center h-full w-full z-10">
           <Skills />
         </div>
       </div>
@@ -235,14 +235,14 @@ export default function Home() {
         </div>
 
         <div className="container max-w-[1200px] mx-auto flex h-full justify-center items-center">
-          <div className=" w-full flex flex-col justify-center items-center -top-60 z-20 px-4">
+          <div className="w-full flex flex-col justify-center items-center z-20 px-4 pb-[150px]">
             <Services />
           </div>
         </div>
       </div>
 
       {/* Block Technologies */}
-      <div className="bg-white h-full w-full mb-10">
+      <div className="relative bg-white h-full w-full mb-10 h-[900px] py-[200px]">
         <div className="container max-w-[1200px] mx-auto h-full justify-center items-center">
           <Technologies />
         </div>
@@ -250,7 +250,7 @@ export default function Home() {
 
       {/* Block Projects */}
       <div className="bg-white h-full w-full mb-10">
-        <div className="container max-w-[1200px] mx-auto h-full justify-center items-center">
+        <div className="container max-w-[1200px] mx-auto h-full">
           <Projects />
         </div>
       </div>
