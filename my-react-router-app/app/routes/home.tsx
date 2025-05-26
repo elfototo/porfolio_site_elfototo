@@ -20,7 +20,10 @@ export default function Home() {
   return (
     <>
       {/* Block Main */}
-      <div className="flex flex-col md:flex-row justify-center items-center md:justify-between mx-auto container max-w-[1200px] px-4 pb-10 md:pb-0">
+      <div
+        id="home"
+        className="flex flex-col md:flex-row justify-center items-center md:justify-between mx-auto container max-w-[1200px] px-4 pb-10 md:pb-0"
+      >
         {/* bg img */}
         <img
           src={"/bg.webp"}
@@ -120,7 +123,7 @@ export default function Home() {
 
       {/* Block About */}
 
-      <div className="relative text-white w-full">
+      <div id="about" className="relative text-white w-full">
         {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -160,10 +163,10 @@ export default function Home() {
               />
             </div>
             <div className="md:w-[50%] w-full">
-              <h1 className="text-white text-5xl font-bold mb-10">{t("about.title")}</h1>
-              <p>
-              {t("about.text")}
-              </p>
+              <h1 className="text-white text-5xl font-bold mb-10">
+                {t("about.title")}
+              </h1>
+              <p>{t("about.text")}</p>
             </div>
 
             {/* mobile img*/}
@@ -179,7 +182,7 @@ export default function Home() {
       </div>
 
       {/* Block Skills */}
-      <div className="relative bg-white h-full w-full">
+      <div id="skills" className="relative bg-white h-full w-full">
         {/* Deckstop Wawe*/}
         <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -210,7 +213,10 @@ export default function Home() {
       </div>
 
       {/* Block Services */}
-      <div className="bg-gray-700 min-h-[1000px] md:min-h-[500px] lg:min-h-[450px] relative w-full mb-10">
+      <div
+        id="services"
+        className="bg-gray-700 min-h-[1000px] md:min-h-[500px] lg:min-h-[450px] relative w-full mb-10"
+      >
         {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -251,7 +257,7 @@ export default function Home() {
       </div>
 
       {/* Block Projects */}
-      <div className="bg-white h-full w-full mb-10">
+      <div id="projects" className="bg-white h-full w-full mb-10">
         <div className="container max-w-[1200px] mx-auto h-full">
           <Projects />
         </div>

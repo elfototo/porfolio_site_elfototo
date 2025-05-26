@@ -12,6 +12,8 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+
+  scroll-behavior: smooth;
 }
 
 .swiper-button-disabled {
@@ -29,5 +31,5 @@ body {
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color:  #eab308;
+  background-color: #eab308;
 }

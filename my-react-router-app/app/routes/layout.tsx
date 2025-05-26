@@ -1,25 +1,23 @@
 import { Link, Outlet, useLocation } from "react-router";
 import "swiper/css/bundle";
 import "../app.css";
+import { useTranslation } from "react-i18next";
 
 export default function Component() {
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/projects", label: "Projects" },
-    { to: "/contact", label: "Contact" },
+    { to: "#home", label: "Home" },
+    { to: "#about", label: "About" },
+    { to: "#skills", label: "Skills" },
+    { to: "#services", label: "Services" },
+    { to: "#projects", label: "Projects" },
+    { to: "#contact", label: "Contact" },
   ];
 
   return (
     <div className="flex flex-col bg-white text-gray-700 relative w-full min-h-screen overflow-x-hidden">
-        {/* absolute inset-0 flex */}
-      <div className="">
-        {/* <div className="md:w-[65%] w-ful bg-white h-screen"></div>
-        <div className="md:w-[35%] w-0 md:bg-yellow-400 h-screen"></div> */}
-      </div>
-
       {/* Навигация */}
       <header className="text-xl font-bold relative z-10">
         <nav className="container max-w-[1200px] mx-auto px-8 py-8 flex justify-center items-center">
