@@ -5,6 +5,7 @@ import Technologies from "../components/technologies";
 import Projects from "../components/projects";
 import Skills from "../components/skills";
 import ParallaxIcon from "../components/parallaxIcon";
+import { useTranslation } from "react-i18next";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,6 +15,8 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
       {/* Block Main */}
@@ -36,31 +39,38 @@ export default function Home() {
         </div>
         <div className="md:hidden flex justify-center items-center flex-col z-20 w-full mt-8">
           <h2 className="text-xl leading-none font-semibold mb-2">
-            Hello, I'm a{" "}
+            {t("main.greeting")}
             <span className="text-yellow-400 underline">
-              Frontend developer.
+              {t("main.titleHighlight.part1")}
+              {t("main.titleHighlight.part2")}
             </span>{" "}
           </h2>
           <h2 className="text-xl leading-none font-semibold mb-4">
-            My name is Elizaveta
+            {t("main.name.part1")}
+            {t("main.name.name")}
           </h2>
-          <MainButton value="Download CV" />
+          <MainButton value={t("main.downloadCV")} />
         </div>
 
         {/* Deckstop */}
         <div className="md:block hidden flex flex-col z-20 xl:w-[50%] md:w-[50%] w-[50%] h-full mr-0 pb-10">
           <p className="text-xl leading-none font-semibold mb-4">
-            Hello, I'm a
+            {t("main.greeting")}
           </p>
           <h1 className="text-[50px] leading-none font-bold mb-8">
-            <span className="text-gray-700">Frontend </span>
-            <span className="text-yellow-400 underline">developer.</span>
+            <span className="text-gray-700">
+              {t("main.titleHighlight.part1")}
+            </span>
+            <span className="text-yellow-400 underline">
+              {t("main.titleHighlight.part2")}
+            </span>
           </h1>
           <p className="text-xl leading-none font-semibold mb-8">
-            My name is <span className="">Elizaveta Davydova</span>. Welcome to
-            my website. Here I'm posting my experience and last projects.
+            {t("main.name.part1")}
+            <span className="">{t("main.name.name")}</span>
+            {t("main.name.part2")}
           </p>
-          <MainButton value="Download CV" />
+          <MainButton value={t("main.downloadCV")} />
         </div>
 
         <div className="md:block flex mx-auto hidden relative w-[70%] lg:w-[70%] overflow-visible lg:h-[37rem] h-[30rem]">
@@ -150,17 +160,9 @@ export default function Home() {
               />
             </div>
             <div className="md:w-[50%] w-full">
-              <h1 className="text-white text-5xl font-bold mb-10">About me</h1>
+              <h1 className="text-white text-5xl font-bold mb-10">{t("about.title")}</h1>
               <p>
-                Junior Frontend Developer with over a year of experience working
-                with React, Next.js, and modern CSS frameworks such as Tailwind
-                CSS. My background in design allows me to effectively integrate
-                visual and technical solutions, providing a comprehensive
-                approach to development — from implementation to creating
-                user-friendly and visually appealing interfaces. I am eager to
-                further develop my skills in frontend development and become an
-                expert in building high-quality, performant, and scalable web
-                applications.
+              {t("about.text")}
               </p>
             </div>
 

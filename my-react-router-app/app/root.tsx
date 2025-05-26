@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import "./i18n";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
+
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -33,6 +36,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <header>
+          <LanguageSwitcher />
+        </header>
         {children}
         <ScrollRestoration />
         <Scripts />

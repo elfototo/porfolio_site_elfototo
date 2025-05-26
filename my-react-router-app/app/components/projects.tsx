@@ -8,7 +8,7 @@ export default function Projects() {
         Latest projects
       </h1>
       <div className="p-2">
-        <ProjectCard idCard={1}/>
+      <ProjectCard idCard={1}/>
       </div>
     </>
   );

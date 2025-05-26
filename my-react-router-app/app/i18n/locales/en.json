@@ -1,0 +1,67 @@
+{
+    "main": {
+        "greeting": "Hello, I'm a",
+        "titleHighlight": {
+            "part1": "Frontend ",
+            "part2": "developer."
+        },
+        "name": {
+            "part1": "My name is ",
+            "name": "Elizaveta Davydova",
+            "part2": ". Welcome to my website. Here I'm posting my experience and last projects."
+        },
+        "downloadCV": "Download CV"
+    },
+    "about": {
+        "title": "About me",
+        "text": "Junior Frontend Developer with over a year of experience working with React, Next.js, and modern CSS frameworks such as Tailwind CSS. My background in design allows me to effectively integrate visual and technical solutions, providing a comprehensive approach to development — from implementation to creating user-friendly and visually appealing interfaces. I am eager to further develop my skills in frontend development and become an expert in building high-quality, performant, and scalable web applications."
+    },
+    "skills": {
+        "title": "Skills",
+        "categories": {
+            "frontend": "Frontend Stack",
+            "tools": "Tools & Practices",
+            "design": "UI / UX & Design",
+            "approach": "Approach"
+        },
+        "list": {
+            "frontend": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "Tailwind CSS"
+            ],
+            "tools": [
+                "Git",
+                "Docker",
+                "SWR",
+                "Context API"
+            ],
+            "approach": [
+                "Responsive Design",
+                "Web Performance Optimization",
+                "API Integration"
+            ],
+            "design": [
+                "Figma",
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ]
+        }
+    },
+    "services": {
+        "title": "Services"
+    },
+    "technologies": {
+        "title": "Technologies"
+    },
+    "projects": {
+        "title": "Projects"
+    },
+    "language": {
+        "switch": "Switch Language"
+    }
+}

@@ -1,66 +1,33 @@
+import { useTranslation } from "react-i18next";
+
 export default function Skills() {
+  const { t } = useTranslation();
+
+  type SkillCategory = "frontend" | "tools" | "approach" | "design";
+  const categories: SkillCategory[] = ["frontend", "tools", "approach", "design"];
+
   return (
-    <div className="w-full">
-      <h1 className="text-gray-700 text-5xl font-bold mb-10">Skills</h1>
-      <div className="w-full">
-        <div className="flex gap-8 flex-wrap w-full">
-          <div className="flex flex-col">
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
+    <div className="w-full flex justify-center flex-col">
+      <h1 className="text-gray-700 mx-auto text-5xl font-bold mb-10">
+        {t("skills.title")}
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        {categories.map((category: SkillCategory) => (
+          <div key={category}>
+            <h1 className="font-bold mb-4">
+              {t(`skills.categories.${category}`)}
+            </h1>
+            <ul>
+              {(
+                t(`skills.list.${category}`, {
+                  returnObjects: true,
+                }) as string[]
+              ).map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
           </div>
-          <div className="flex flex-col">
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-            <div className="flex justify-center items-center gap-2">
-              <h2 className="text-2xl">Skill 1</h2>
-              <div className="bg-blue-500 w-[200px] h-2"></div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
