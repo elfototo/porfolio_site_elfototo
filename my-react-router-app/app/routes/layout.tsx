@@ -8,12 +8,12 @@ export default function Component() {
   const { t } = useTranslation();
 
   const navLinks = [
-    { to: "#home", label: "Home" },
-    { to: "#about", label: "About" },
-    { to: "#skills", label: "Skills" },
-    { to: "#services", label: "Services" },
-    { to: "#projects", label: "Projects" },
-    { to: "#contact", label: "Contact" },
+    { to: "#home", label: t("navigation.home") },
+    { to: "#about", label: t("navigation.about") },
+    { to: "#skills", label: t("navigation.skills") },
+    { to: "#services", label: t("navigation.services") },
+    { to: "#projects", label: t("navigation.projects") },
+    { to: "#contact", label: t("navigation.contact") },
   ];
 
   return (

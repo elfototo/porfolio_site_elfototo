@@ -1,4 +1,12 @@
 {
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "services": "Services",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
     "main": {
         "greeting": "Hello, I'm a",
         "titleHighlight": {
@@ -53,7 +61,25 @@
         }
     },
     "services": {
-        "title": "Services"
+        "title": "Services",
+        "list": [
+            {
+                "title": "Interface Development",
+                "content": "Building responsive web apps using React/Next.js/React Router and API integration"
+            },
+            {
+                "title": "Code Optimization",
+                "content": "Improving performance, removing duplication, and enhancing code readability"
+            },
+            {
+                "title": "Responsive Design",
+                "content": "Creating designs that look great on all devices"
+            },
+            {
+                "title": "Landing Pages",
+                "content": "Building effective and modern landing pages"
+            }
+        ]
     },
     "technologies": {
         "title": "Technologies"

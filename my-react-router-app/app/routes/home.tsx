@@ -250,11 +250,11 @@ export default function Home() {
       </div>
 
       {/* Block Technologies */}
-      <div className="relative bg-white h-full w-full mb-10 h-[900px] py-[200px]">
+      {/* <div className="relative bg-white h-full w-full mb-10 h-[900px] py-[200px]">
         <div className="container max-w-[1200px] mx-auto h-full justify-center items-center">
           <Technologies />
         </div>
-      </div>
+      </div> */}
 
       {/* Block Projects */}
       <div id="projects" className="bg-white h-full w-full mb-10">

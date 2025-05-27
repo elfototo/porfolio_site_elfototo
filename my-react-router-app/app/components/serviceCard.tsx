@@ -1,64 +1,44 @@
 import { PiDevicesFill } from "react-icons/pi";
 import type { JSX } from "react";
 
-interface Service {
-  id: number;
+interface Props {
   title: string;
   content: string;
-  color: string;
-  icon: JSX.Element;
+  id: number;
 }
 
-const services: Service[] = [
-  {
-    id: 1,
-    title: "Разработка интерфейсов",
-    content:
-      "Создаю адаптивные веб-приложения с использованием React/Next.js/React Router и интеграцией с API",
-    color: "bg-yellow-500",
-    icon: <PiDevicesFill size={70} />,
-  },
-  {
-    id: 2,
-    title: "Оптимизация кода",
-    content:
-      "Создаю адаптивные веб-приложения с использованием React/Next.js/React Router и интеграцией с API",
-    color: "bg-green-500",
-    icon: <PiDevicesFill size={70} />,
-  },
-  {
-    id: 3,
-    title: "Адаптивный дизайн",
-    content:
-      "Создаю адаптивные веб-приложения с использованием React/Next.js/React Router и интеграцией с API",
-    color: "bg-cyan-500",
-    icon: <PiDevicesFill size={70} />,
-  },
-  {
-    id: 4,
-    title: "Лэндинги",
-    content:
-      "Создаю адаптивные веб-приложения с использованием React/Next.js/React Router и интеграцией с API",
-    color: "bg-purple-500",
-    icon: <PiDevicesFill size={70} />,
-  },
+const colors = [
+  "bg-purple-500",
+  "bg-green-500",
+  "bg-cyan-500",
+  "bg-yellow-500",
 ];
 
-export default function ServiceCard({ value }: { value: string }) {
-  const curentService: Service | undefined = services.find(
-    (item) => item.title === value
-  );
-  if (!curentService) return null;
+const images = [
+  "/services.webp",
+  "/services_2.webp",
+  "/services_3.webp",
+  "/services_4.webp",
+];
+
+export default function ServiceCard({ title, content, id }: Props) {
+  const color = colors[id % colors.length];
+  const image = images[id % images.length];
+
+  const icon: JSX.Element = <PiDevicesFill size={70} />;
 
   return (
     <>
       <div
-        className={`${curentService.color} w-full h-full flex flex-col items-start justify-center text-white text-2xl p-8 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 cursor-default`}
+        className={`${color} w-full h-full flex flex-col items-start text-white text-2xl p-8 hover:shadow-xl transform transition-all duration-300 cursor-default`}
       >
-        {curentService.icon}
-        <h1 className="font-bold mb-4">{curentService.title}</h1>
+        <div className="md:w-full w-[300px] mb-10 mx-auto">
+          <img src={image} alt="img" className="object-contain mx-auto" />
+        </div>
+
+        <h1 className="font-bold mb-4 text-2xl">{title}</h1>
         <div className="">
-          <p className="text-lg">{curentService.content}</p>
+          <p className="text-sm">{content}</p>
         </div>
       </div>
     </>
