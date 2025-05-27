@@ -105,11 +105,11 @@ export default function ProjectCard({ idCard }: { idCard: number }) {
             loading="eager"
             className="w-[150px] h-auto mb-2"
           />
-          <p className="leading-none font-regular italic mb-2 text-gray-400">
+          <p className="leading-none font-regular italic mb-2 text-gray-400 text-sm">
             some details about card
           </p>
           <div className="h-1 w-10 bg-blue-500 mb-2"></div>
-          <p className="leading-none font-regular mb-2">
+          <p className="text-sm leading-none font-regular mb-2">
             {currentProject?.content}
           </p>
           <div className="flex flex-wrap gap-4">

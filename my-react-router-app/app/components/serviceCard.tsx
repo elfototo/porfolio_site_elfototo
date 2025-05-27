@@ -32,7 +32,8 @@ export default function ServiceCard({ title, content, id }: Props) {
       <div
         className={`${color} w-full h-full flex flex-col items-start text-white text-2xl p-8 hover:shadow-xl transform transition-all duration-300 cursor-default`}
       >
-        <div className="md:w-full w-[300px] mb-10 mx-auto">
+        <div className="md:w-full  w-[300px] mb-8  mx-auto">
+          
           <img src={image} alt="img" className="object-contain mx-auto" />
         </div>
 
