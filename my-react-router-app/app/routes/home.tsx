@@ -157,7 +157,7 @@ export default function Home() {
             <div className="md:block hidden relative w-[300px] h-[400px] mr-10">
               {/* deckstop img */}
               <ParallaxIcon
-                src="/about.webp"
+                src="/about_2.webp"
                 speed={-5}
                 className="top-0 right-0 w-[500px] z-10"
               />
