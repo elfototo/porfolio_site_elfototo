@@ -45,14 +45,14 @@ export default function Skills() {
 
   return (
     <div className="w-full flex justify-center flex-col">
-      <h1 className="text-gray-700 mx-auto text-5xl font-bold lg:mb-40 mb-10">
+      <h1 className="text-gray-700 mx-auto text-5xl font-bold lg:mb-40 mb-10 z-10">
         {t("skills.title")}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 lg:gap-y-40 gap-y-4">
         {categories.map(({ id, icon, color }) => (
           <div
             key={id}
-            className={`bg-gray-100 flex lg:flex-col group hover:shadow-lg transition duration-300 relative border-1 border-gray-300 rounded-xl`}
+            className={`bg-white flex lg:flex-col group hover:shadow-lg transition duration-300 relative border-1 border-gray-300 rounded-xl`}
           >
             <div
               className={`rounded-xl ${color} lg:w-[80%]  lg:h-32 h-full w-[25%] lg:absolute block lg:-top-[60px] lg:left-1/2 transform lg:-translate-x-1/2 text-white group-hover:rotate-6 transition duration-300 flex items-center justify-center`}

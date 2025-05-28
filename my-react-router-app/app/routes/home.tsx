@@ -182,7 +182,13 @@ export default function Home() {
       </div>
 
       {/* Block Skills */}
-      <div id="skills" className="relative bg-white h-full w-full">
+      <div id="skills" className="relative bg-yellow-300 opacity-100 h-full w-full">
+        {/* bg img */}
+        {/* <img
+          src={"/bg.webp"}
+          alt="bg"
+          className="rotate-160 absolute z-0 opacity-100 w-[1900px] lg:-top-[20%] hidden lg:block"
+        /> */}
         {/* Deckstop Wawe*/}
         <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -209,14 +215,42 @@ export default function Home() {
         </div>
         <div className="container max-w-[1200px] px-4 py-[150px] md:py-[250px] xl:py-[350px] mx-auto flex items-center h-full w-full z-10">
           <Skills />
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={8}
+            className="xl:top-1/5 md:top-1/10 top-10 left-50 md:left-1/3 lg:w-[50px] w-[40px] z-20"
+          />
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={10}
+            className="xl:top-1/4 md:top-1/8 xl:left-1/14  md:left-40 top-0 lg:w-[50px] w-[40px] z-20"
+          />
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={-5}
+            className="xl:top-1/3 md:top-1/4 top-50 left-30 xl:left-1/7 md:left-5 lg:w-[50px] w-[40px] z-20"
+          />
+
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={-5}
+            className="xl:bottom-1/9 md:bottom-1/16 bottom-5  right-10 md:right-1/3 lg:w-[50px] w-[40px] z-20"
+          />
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={5}
+            className="xl:bottom-1/4 md:bottom-1/6 bottom-40  right-60 md:right-1/6 lg:w-[50px] w-[40px] z-20"
+          />
+          <ParallaxIcon
+            src="/icon_3.webp"
+            speed={-5}
+            className="xl:bottom-1/6 md:bottom-1/9 bottom-0 right-100 md:right-1/12 lg:w-[50px] w-[40px] z-20"
+          />
         </div>
       </div>
 
       {/* Block Services */}
-      <div
-        id="services"
-        className="bg-gray-700 relative w-full"
-      >
+      <div id="services" className="bg-gray-700 relative w-full">
         {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
