@@ -207,7 +207,7 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <div className="container max-w-[1200px] px-4 py-[300px] xl:py-[400px] mx-auto flex items-center h-full w-full z-10">
+        <div className="container max-w-[1200px] px-4 py-[150px] md:py-[250px] xl:py-[350px] mx-auto flex items-center h-full w-full z-10">
           <Skills />
         </div>
       </div>
@@ -215,7 +215,7 @@ export default function Home() {
       {/* Block Services */}
       <div
         id="services"
-        className="bg-gray-700 min-h-[1000px] md:min-h-[500px] lg:min-h-[450px] relative w-full mb-10"
+        className="bg-gray-700 relative w-full"
       >
         {/*Deckstop wave */}
         <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
@@ -243,7 +243,7 @@ export default function Home() {
         </div>
 
         <div className="container max-w-[1200px] mx-auto flex h-full justify-center items-center">
-          <div className="w-full flex flex-col justify-center items-center z-20 px-4 pb-[150px]">
+          <div className="w-full flex flex-col justify-center items-center z-20 px-4 ">
             <Services />
           </div>
         </div>
@@ -257,8 +257,32 @@ export default function Home() {
       </div> */}
 
       {/* Block Projects */}
-      <div id="projects" className="bg-white h-full w-full mb-10">
-        <div className="container max-w-[1200px] mx-auto h-full">
+      <div id="projects" className="bg-white relative h-full w-full">
+        {/* Deckstop Wawe*/}
+        <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,213.3C672,192,768,96,864,96C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        {/* Mobile wawe*/}
+        <div className="absolute rotate-180 -top-16 md:hidden block w-full z-0 overflow-hidden">
+          <svg
+            className="h-[200px] w-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,224L120,197.3C240,171,480,117,720,90.7C960,64,1200,64,1320,64L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="container max-w-[1200px] px-4 pt-[150px] md:pt-[250px] xl:pt-[350px] mx-auto h-full w-full z-10">
           <Projects />
         </div>
       </div>

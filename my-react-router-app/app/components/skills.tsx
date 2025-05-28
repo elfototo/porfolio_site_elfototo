@@ -45,7 +45,7 @@ export default function Skills() {
 
   return (
     <div className="w-full flex justify-center flex-col">
-      <h1 className="text-gray-700 mx-auto text-5xl font-bold mb-40">
+      <h1 className="text-gray-700 mx-auto text-5xl font-bold lg:mb-40 mb-10">
         {t("skills.title")}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 lg:gap-y-40 gap-y-4">
