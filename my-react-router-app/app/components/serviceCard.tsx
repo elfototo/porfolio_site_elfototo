@@ -30,15 +30,17 @@ export default function ServiceCard({ title, content, id }: Props) {
   return (
     <>
       <div
-        className={`${color} group w-full h-full flex flex-col items-start text-white text-2xl p-8 group-hover:shadow-xl transform transition-all duration-300 cursor-default `}
+        className={`${color} group w-full h-full flex flex-col items-start text-white text-2xl group-hover:shadow-xl transform transition-all duration-300 cursor-default rounded-xl overflow-hidden`}
       >
-        <div className="md:w-full w-[300px] mb-8  mx-auto">
-          
-          <img src={image} alt="img" className="object-contain mx-auto group-hover:scale-105 transition duration-300" />
+        <div className="md:w-full w-[70%] object-contain h-[60%] lg:h-[50%] mb-8 p-4 mx-auto">
+          <img
+            src={image}
+            alt="img"
+            className="object-contain mx-auto group-hover:-rotate-5 transition duration-300"
+          />
         </div>
-
-        <h1 className="font-bold mb-4 text-2xl">{title}</h1>
-        <div className="">
+        <div className="bg-white text-gray-700 p-4 w-full lg:h-[50%] h-[40%]">
+          <h1 className="font-bold mb-4 text-2xl">{title}</h1>
           <p className="text-sm">{content}</p>
         </div>
       </div>
