@@ -1,9 +1,59 @@
+
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('/fonts/Inter_28pt-Regular.ttf') format('truetype');
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('/fonts/Inter_28pt-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-ExtraBold';
+  src: url('/fonts/Inter_28pt-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Thin';
+  src: url('/fonts/Inter_24pt-Thin.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Black';
+  src: url('/fonts/Inter_28pt-Black.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('/fonts/Inter_28pt-Light.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('/fonts/Inter_28pt-SemiBold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@theme {
+  --font-inter-regular: 'Inter-Regular', sans-serif;
+  --font-inter-bold: 'Inter-Bold', sans-serif;
+  --font-inter-extraBold: 'Inter-ExtraBold', sans-serif;
+  --font-inter-thin: 'Inter-Thin', sans-serif;
+  --font-inter-black: 'Inter-Black', sans-serif;
+  --font-inter-light: 'Inter-Light', sans-serif;
+  --font-inter-semiBold: 'Inter-SemiBold', sans-serif;
+}
+
+
 
 html,
 body {
@@ -12,7 +62,7 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
-
+  
   scroll-behavior: smooth;
 }
 

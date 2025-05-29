@@ -57,10 +57,10 @@ export default function Home() {
 
         {/* Deckstop */}
         <div className="md:block hidden flex flex-col z-20 xl:w-[50%] md:w-[50%] w-[50%] h-full mr-0 pb-10">
-          <p className="text-xl leading-none font-semibold mb-4">
+          <p className="font-inter-extraBold leading-none mb-4 ml-[2px]">
             {t("main.greeting")}
           </p>
-          <h1 className="text-[50px] leading-none font-bold mb-8">
+          <h1 className="text-[50px] leading-none font-inter-extraBold mb-8">
             <span className="text-gray-700">
               {t("main.titleHighlight.part1")}
             </span>
@@ -68,12 +68,14 @@ export default function Home() {
               {t("main.titleHighlight.part2")}
             </span>
           </h1>
-          <p className="text-xl leading-none font-semibold mb-8">
+          <p className="ml-[3px]  mb-8">
             {t("main.name.part1")}
             <span className="">{t("main.name.name")}</span>
             {t("main.name.part2")}
           </p>
-          <MainButton value={t("main.downloadCV")} />
+          <div className="ml-[3px]">
+            <MainButton value={t("main.downloadCV")} />
+          </div>
         </div>
 
         <div className="md:block flex mx-auto hidden relative w-[70%] lg:w-[70%] overflow-visible lg:h-[37rem] h-[30rem]">
@@ -163,7 +165,7 @@ export default function Home() {
               />
             </div>
             <div className="md:w-[50%] w-full">
-              <h1 className="text-white text-5xl font-bold mb-10">
+              <h1 className="text-white text-5xl font-inter-bold mb-10">
                 {t("about.title")}
               </h1>
               <p>{t("about.text")}</p>
@@ -182,13 +184,11 @@ export default function Home() {
       </div>
 
       {/* Block Skills */}
-      <div id="skills" className="relative bg-yellow-300 opacity-100 h-full w-full">
-        {/* bg img */}
-        {/* <img
-          src={"/bg.webp"}
-          alt="bg"
-          className="rotate-160 absolute z-0 opacity-100 w-[1900px] lg:-top-[20%] hidden lg:block"
-        /> */}
+      <div
+        id="skills"
+        className="relative bg-yellow-300 opacity-100 h-full w-full"
+      >
+        
         {/* Deckstop Wawe*/}
         <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -214,11 +214,13 @@ export default function Home() {
           </svg>
         </div>
         <div className="container max-w-[1200px] px-4 py-[150px] md:py-[250px] xl:py-[350px] mx-auto flex items-center h-full w-full z-10">
+
           <Skills />
+
           <ParallaxIcon
             src="/icon_3.webp"
             speed={8}
-            className="xl:top-1/5 md:top-1/10 top-10 left-50 md:left-1/3 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/5 md:top-1/10 top-1 left-50 md:left-1/3 lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
@@ -277,7 +279,7 @@ export default function Home() {
         </div>
 
         <div className="container max-w-[1200px] mx-auto flex h-full justify-center items-center">
-          <div className="w-full flex flex-col justify-center items-center z-20 px-4 ">
+          <div className="w-full flex flex-col justify-center items-center z-20 px-4 text-md">
             <Services />
           </div>
         </div>

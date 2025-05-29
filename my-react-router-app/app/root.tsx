@@ -37,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <header>
-          <LanguageSwitcher />
+          {/* <LanguageSwitcher /> */}
         </header>
         {children}
         <ScrollRestoration />

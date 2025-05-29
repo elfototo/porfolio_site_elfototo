@@ -85,7 +85,9 @@
         "title": "Technologies"
     },
     "projects": {
-        "title": "Projects"
+        "title": "Projects",
+        "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
+        "button": "Visit website"
     },
     "language": {
         "switch": "Switch Language"
