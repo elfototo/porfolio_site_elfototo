@@ -22,7 +22,7 @@ export default function Home() {
       {/* Block Main */}
       <div
         id="home"
-        className="flex flex-col md:flex-row justify-center items-center md:justify-between mx-auto container max-w-[1200px] px-4 pb-10 md:pb-0"
+        className="flex flex-col mt-20 md:mt-0 md:flex-row justify-center items-center md:justify-between mx-auto container max-w-[1200px] px-4 pb-10 md:pb-0"
       >
         {/* bg img */}
         <img
@@ -36,11 +36,11 @@ export default function Home() {
             <img
               src="/main_photo.webp"
               alt="Avatar"
-              className="absolute top-2 left-0 w-full h-auto object-cover z-10"
+              className="absolute top-2 left-0 w-full h-auto object-cover"
             />
           </div>
         </div>
-        <div className="md:hidden flex justify-center items-center flex-col z-20 w-full mt-8">
+        <div className="md:hidden flex justify-center items-center flex-col z-10 w-full mt-8">
           <h2 className="text-xl leading-none font-semibold mb-2">
             {t("main.greeting")}
             <span className="text-yellow-400 underline">
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
 
         {/* Deckstop */}
-        <div className="md:block hidden flex flex-col z-20 xl:w-[50%] md:w-[50%] w-[50%] h-full mr-0 pb-10">
+        <div className="md:block hidden flex flex-col z-10 xl:w-[50%] md:w-[50%] w-[50%] h-full mr-0 pb-10">
           <p className="font-inter-extraBold leading-none mb-4 ml-[2px]">
             {t("main.greeting")}
           </p>
