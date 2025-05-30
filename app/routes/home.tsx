@@ -7,10 +7,6 @@ import Skills from "../components/skills";
 import ParallaxIcon from "../components/parallaxIcon";
 import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
-import { BsTelegram } from "react-icons/bs";
-import { IoMail } from "react-icons/io5";
-import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
 
