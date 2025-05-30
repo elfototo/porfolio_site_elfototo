@@ -6,6 +6,13 @@ import Projects from "../components/projects";
 import Skills from "../components/skills";
 import ParallaxIcon from "../components/parallaxIcon";
 import { useTranslation } from "react-i18next";
+import { FaGithub } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
+import { BsTelegram } from "react-icons/bs";
+import { IoMail } from "react-icons/io5";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -103,7 +110,7 @@ export default function Home() {
           <ParallaxIcon
             src="/icon_1.webp"
             speed={-20}
-            className="-top-1/10 right-1/7 lg:w-[170px] w-[120px] z-20"
+            className="-top-8 right-1/7 lg:w-[170px] w-[120px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
@@ -188,7 +195,6 @@ export default function Home() {
         id="skills"
         className="relative bg-yellow-300 opacity-100 h-full w-full"
       >
-        
         {/* Deckstop Wawe*/}
         <div className="absolute rotate-180 xl:-top-0 lg:-top-0 md:-top-0 hidden md:block w-full z-0 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -214,7 +220,6 @@ export default function Home() {
           </svg>
         </div>
         <div className="container max-w-[1200px] px-4 py-[150px] md:py-[250px] xl:py-[350px] mx-auto flex items-center h-full w-full z-10">
-
           <Skills />
 
           <ParallaxIcon
@@ -318,8 +323,70 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <div className="container max-w-[1200px] px-4 pt-[150px] md:pt-[250px] xl:pt-[350px] mx-auto h-full w-full z-10">
+        <div className="container max-w-[1200px] px-4 pt-[150px] md:pt-[250px] xl:pt-[350px] mx-auto h-full w-full z-10 mb-[350px]">
           <Projects />
+        </div>
+      </div>
+
+      {/* Block Contacts */}
+
+      <div id="contact" className="relative text-white w-full">
+        {/*Deckstop wave */}
+        <div className="absolute xl:-top-70 lg:-top-44 md:-top-40 hidden md:block w-full z-0 overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,96L48,112C96,128,192,160,288,154.7C384,149,480,107,576,117.3C672,128,768,192,864,197.3C960,203,1056,149,1152,112C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+
+        {/* Mobile wave*/}
+        <div className="absolute -top-35 md:hidden block w-full z-0 overflow-hidden">
+          <svg
+            className="h-[200px] w-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#334155"
+              fillOpacity="1"
+              d="M0,224L120,197.3C240,171,480,117,720,90.7C960,64,1200,64,1320,64L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+
+        {/* Border up*/}
+        <div className="relative bg-[#334155] w-full h-full relative z-10">
+          {/* Content */}
+          <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
+            <div className="w-full mb-4 mx-auto flex items-center">
+              <h1 className="text-white text-5xl font-inter-bold mb-10 mx-auto">
+                {t("contacts.title")}
+              </h1>
+              
+            </div>
+
+            <div className="flex gap-4 flex-wrap items-center justify-center">
+              <div className="bg-black  cursor-pointer rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
+                <FaGithub />
+                <a href="https://github.com/elfototo" target="_blank">GitHub</a>
+              </div>
+              <div className="bg-blue-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
+                <FaLinkedinIn />
+                <a href="https://www.linkedin.com/in/elizaveta-davydova/" target="_blank">LinkedIn</a>
+              </div>
+              {/* <div className="bg-cyan-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
+                <BsTelegram />
+                <a>Telegram</a>
+              </div>
+              <div className="bg-red-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
+                <IoMail />
+                <a>Mail</a>
+              </div> */}
+            </div>
+          </div>
         </div>
       </div>
     </>

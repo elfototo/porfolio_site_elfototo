@@ -4,7 +4,11 @@ import "../app.css";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import { LanguageSwitcheMobiler } from "../components/LanguageSwitcher";
 import { IoCloseOutline } from "react-icons/io5";
+import { FaArrowAltCircleUp } from "react-icons/fa";
+import { BsArrowUpCircleFill } from "react-icons/bs";
+
 
 export default function Component() {
   const location = useLocation();
@@ -28,18 +32,29 @@ export default function Component() {
       <div className="hidden md:block">
         <LanguageSwitcher />
       </div>
+      <div>
+        <div
+          className={`${
+            menuOpen ? "hidden" : "block"
+          } fixed z-99 bottom-5 right-4 cursor-pointer font-bold rounded-full hover:scale-105 transition duration-300 hover:text-white text-white shadow-xl`}
+        >
+          <Link to="#home">
+            <BsArrowUpCircleFill className="w-[50px] h-[50px]  text-yellow-500 rounded-full bg-white"/>
+          </Link>
+        </div>
+      </div>
       {/* Навигация */}
       <header className="text-lg relative z-20">
         {/* Mobile */}
         <button
-          className="md:hidden block text-3xl absolute top-5 left-5"
+          className="md:hidden block text-3xl absolute top-5 right-5"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
           <div className="gap-2 flex flex-col">
-            <div className="bg-gray-500 w-10 h-1 rounded-full"></div>
-            <div className="bg-gray-500 w-10 h-1 rounded-full"></div>
-            <div className="bg-gray-500 w-10 h-1 rounded-full"></div>
+            <div className="bg-gray-500 w-8 h-1 rounded-full"></div>
+            <div className="bg-gray-500 w-8 h-1 rounded-full"></div>
+            <div className="bg-gray-500 w-8 h-1 rounded-full"></div>
           </div>
         </button>
 
@@ -59,13 +74,17 @@ export default function Component() {
         </ul>
 
         {menuOpen && (
-          <div className="flex items-center justify-center">
-            <ul className="h-screen md:hidden flex items-center justify-center flex-col gap-4 px-8 pb-8 pt-2 bg-white shadow-md absolute top-full  left-0 w-full z-99 text-2xl divide-y divide-gray-300">
+          <div className="flex relative">
+            <ul
+              className={`fixed top-0 right-0 h-screen w-3/4 md:hidden flex flex-col gap-4 px-8 pb-8 pt-4 bg-white shadow-md z-50 text-2xl divide-y divide-gray-300 transition transition-transform duration-700 ease-in-out ${
+                menuOpen ? "translate-x-0" : "translate-x-full"
+              }`}
+            >
               {navLinks.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    onClick={() => setMenuOpen(false)} // закрыть меню при клике
+                    onClick={() => setMenuOpen(false)}
                     className={`block hover:text-yellow-500 font-inter-extraBold transition duration-300 py-5 ${
                       location.pathname === link.to ? "text-yellow-500" : ""
                     }`}
@@ -73,12 +92,18 @@ export default function Component() {
                     {link.label}
                   </Link>
                 </li>
-                
               ))}
             </ul>
-            
-            <button className="absolute top-5 right-5 z-99" onClick={toggleMenu}>
-              <IoCloseOutline size={50}/>
+            <div className="fixed z-99 bottom-5 right-5">
+              <LanguageSwitcheMobiler />
+            </div>
+            <button
+              className={`fixed top-5 right-5 z-99 ${
+                menuOpen ? "block" : "hidden"
+              }`}
+              onClick={toggleMenu}
+            >
+              <IoCloseOutline className="w-[50px] h-[50px]" />
             </button>
           </div>
         )}

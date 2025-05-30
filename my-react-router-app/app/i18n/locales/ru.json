@@ -88,6 +88,11 @@
         "content": "Проект представляет собой фронтенд-сайт, разработанный с использованием Next.js. Он позволяет пользователям искать мероприятия в Санкт-Петербурге по категориям, дате и популярным локациям. Все мероприятия агрегируются на бэкенде и отображаются на сайте. Веб-сайт работает как веб-приложение и также доступен через Telegram-бота.",
         "button": "Посетить сайт"
     },
+    "contacts": {
+        "title": "Контакты",
+        "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
+        "button": "Visit website"
+    },
     "language": {
         "switch": "Сменить язык"
     }
