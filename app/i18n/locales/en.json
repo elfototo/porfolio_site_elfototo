@@ -8,7 +8,7 @@
         "contact": "Contact"
     },
     "main": {
-        "greeting": "Hello, I'm a",
+        "greeting": "Hello, I'm a ",
         "titleHighlight": {
             "part1": "Frontend ",
             "part2": "developer."
@@ -27,7 +27,7 @@
     "skills": {
         "title": "Skills",
         "categories": {
-            "frontend1": "Frontend Stack",
+            "frontend": "Frontend Stack",
             "tools": "Tools & Practices",
             "design": "UI / UX & Design",
             "approach": "Approach"

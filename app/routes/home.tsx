@@ -44,7 +44,7 @@ export default function Home() {
         <div className="md:hidden flex justify-center items-center flex-col z-10 w-full mt-8">
           <h2 className="text-xl leading-none font-semibold mb-2">
             {t("main.greeting")}
-            <span className="text-yellow-400 underline">
+            <span className="text-yellow-400 underline font-inter-bold">
               {t("main.titleHighlight.part1")}
               {t("main.titleHighlight.part2")}
             </span>{" "}
@@ -219,17 +219,17 @@ export default function Home() {
           <ParallaxIcon
             src="/icon_3.webp"
             speed={8}
-            className="xl:top-1/5 md:top-1/10 top-1 left-50 md:left-1/3 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/5 md:top-1/10 -top-10 right-25 md:left-1/3 lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={10}
-            className="xl:top-1/4 md:top-1/8 xl:left-1/14  md:left-40 top-0 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/4 md:top-1/8 xl:left-1/14  md:left-30 left-5 top-0 lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={-5}
-            className="xl:top-1/3 md:top-1/4 top-50 left-30 xl:left-1/7 md:left-5 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/3 md:top-1/4 top-35 right-6 xl:left-1/7 md:left-5 lg:w-[50px] w-[40px] z-20"
           />
 
           <ParallaxIcon
@@ -317,7 +317,7 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <div className="container max-w-[1200px] px-4 pt-[150px] md:pt-[250px] xl:pt-[350px] mx-auto h-full w-full z-10 mb-[350px]">
+        <div className="container max-w-[1200px] px-4 pt-[150px] md:pt-[250px] xl:pt-[350px] mx-auto h-full w-full z-10 lg:mb-[300px] md:mb-[200px] mb-[100px]">
           <Projects />
         </div>
       </div>
