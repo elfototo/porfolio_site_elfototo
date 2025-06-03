@@ -8,7 +8,6 @@ import { LanguageSwitcheMobiler } from "../components/LanguageSwitcher";
 import { IoCloseOutline } from "react-icons/io5";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 
-
 export default function Component() {
   const location = useLocation();
   const { t } = useTranslation();
@@ -37,8 +36,14 @@ export default function Component() {
             menuOpen ? "hidden" : "block"
           } fixed z-99 bottom-5 right-4 cursor-pointer font-bold rounded-full hover:scale-105 transition duration-300 hover:text-white text-white shadow-xl`}
         >
-          <Link to="#home">
-            <BsArrowUpCircleFill className="w-[50px] h-[50px]  text-yellow-500 rounded-full bg-white"/>
+          <Link
+            to="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <BsArrowUpCircleFill className="w-[50px] h-[50px]  text-yellow-500 rounded-full bg-white" />
           </Link>
         </div>
       </div>
