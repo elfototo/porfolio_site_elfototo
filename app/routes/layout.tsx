@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "react-router";
-import "swiper/css/bundle";
+// import "swiper/css/bundle";
 import "../app.css";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
