@@ -49,11 +49,11 @@ export default function Skills() {
             className={`bg-white flex lg:flex-col group hover:shadow-lg transition duration-300 relative border-1 border-gray-300 rounded-xl`}
           >
             <div
-              className={`rounded-xl ${color} lg:w-[80%]  lg:h-32 h-full w-[25%] lg:absolute block lg:-top-[60px] lg:left-1/2 transform lg:-translate-x-1/2 text-white group-hover:rotate-6 transition duration-300 flex items-center justify-center`}
+              className={`rounded-xl ${color} lg:w-[80%]  lg:h-32 h-full w-[30%] lg:absolute block lg:-top-[60px] lg:left-1/2 transform lg:-translate-x-1/2 text-white group-hover:rotate-6 transition duration-300 flex items-center justify-center`}
             >
               {icon}
             </div>
-            <div className="p-8">
+            <div className="p-8 md:w-[80%] w-[75%]">
               <h1 className="lg:mt-14 mt-0 font-inter-extraBold text-2xl mb-4">
                 {t(`skills.categories.${id}`)}
               </h1>
