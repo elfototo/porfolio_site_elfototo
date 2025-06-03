@@ -219,33 +219,33 @@ export default function Home() {
           <ParallaxIcon
             src="/icon_3.webp"
             speed={8}
-            className="xl:top-1/5 md:top-1/10 -top-10 right-25 md:left-1/3 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/5 md:top-1/10 -top-10 right-25 md:left-1/3 md:block hidden lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={10}
-            className="xl:top-1/4 md:top-1/8 xl:left-1/14  md:left-30 left-5 top-0 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/4 md:top-1/8 xl:left-1/14  md:left-30 left-5 md:block hidden top-0 lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={-5}
-            className="xl:top-1/3 md:top-1/4 top-35 right-6 xl:left-1/7 md:left-5 lg:w-[50px] w-[40px] z-20"
+            className="xl:top-1/3 md:top-1/4 top-35 right-6 xl:left-1/7 md:left-5 md:block hidden lg:w-[50px] w-[40px] z-20"
           />
 
           <ParallaxIcon
             src="/icon_3.webp"
             speed={-5}
-            className="xl:bottom-1/9 md:bottom-1/16 bottom-5  right-10 md:right-1/3 lg:w-[50px] w-[40px] z-20"
+            className="xl:bottom-1/9 md:bottom-1/16 bottom-5  right-10 md:right-1/3 md:block hidden lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={5}
-            className="xl:bottom-1/4 md:bottom-1/6 bottom-40  right-60 md:right-1/6 lg:w-[50px] w-[40px] z-20"
+            className="xl:bottom-1/4 md:bottom-1/6 bottom-40  right-60 md:right-1/6 md:block hidden lg:w-[50px] w-[40px] z-20"
           />
           <ParallaxIcon
             src="/icon_3.webp"
             speed={-5}
-            className="xl:bottom-1/6 md:bottom-1/9 bottom-0 right-100 md:right-1/12 lg:w-[50px] w-[40px] z-20"
+            className="xl:bottom-1/6 md:bottom-1/9 bottom-0 right-100 md:right-1/12 md:block hidden lg:w-[50px] w-[40px] z-20"
           />
         </div>
       </div>
