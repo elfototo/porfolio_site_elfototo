@@ -5,5 +5,5 @@
 /.react-router/
 /build/
 
-# Local Netlify folder
+# Netlify
 .netlify
