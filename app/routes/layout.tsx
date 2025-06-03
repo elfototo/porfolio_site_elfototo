@@ -6,7 +6,6 @@ import { useState } from "react";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { LanguageSwitcheMobiler } from "../components/LanguageSwitcher";
 import { IoCloseOutline } from "react-icons/io5";
-import { FaArrowAltCircleUp } from "react-icons/fa";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 
 

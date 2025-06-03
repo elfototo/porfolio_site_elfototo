@@ -7,11 +7,11 @@ import { useTranslation } from "react-i18next";
 
 import type { JSX } from "react";
 
-export default function ProjectCard({ idCard }: { idCard: number }) {
+export default function ProjectCard({ id }: { id: number }) {
   const { t } = useTranslation();
 
   interface Projects {
-    idCard: number;
+    id: number;
     title: string;
     content: string;
     github: string;
@@ -21,7 +21,7 @@ export default function ProjectCard({ idCard }: { idCard: number }) {
 
   const projects: Projects[] = [
     {
-      idCard: 1,
+      id: 1,
       title: t("projects.title"),
       content: t("projects.content"),
       github: "https://github.com/elfototo/davai-s-nami",
@@ -39,7 +39,7 @@ export default function ProjectCard({ idCard }: { idCard: number }) {
   ];
 
   const currentProject: Projects | undefined = projects.find(
-    (item) => item.idCard === idCard
+    (item) => item.id === id
   );
   return (
     <>

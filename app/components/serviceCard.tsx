@@ -1,6 +1,3 @@
-import { PiDevicesFill } from "react-icons/pi";
-import type { JSX } from "react";
-
 interface Props {
   title: string;
   content: string;
@@ -21,11 +18,17 @@ const images = [
   "/services_4.webp",
 ];
 
-export default function ServiceCard({ title, content, id }: Props) {
+export default function ServiceCard({
+  title,
+  content,
+  id,
+}: {
+  title: string;
+  content: string;
+  id: number;
+}) {
   const color = colors[id % colors.length];
   const image = images[id % images.length];
-
-  const icon: JSX.Element = <PiDevicesFill size={70} />;
 
   return (
     <>

@@ -9,7 +9,7 @@ export default function Projects() {
         {t("projects.title")}
       </h1>
       <div className="p-2">
-        <ProjectCard idCard={1} />
+        <ProjectCard id={1} />
       </div>
     </>
   );

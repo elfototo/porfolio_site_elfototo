@@ -17,17 +17,18 @@ import { SiWebpack } from "react-icons/si";
 
 export default function Technologies() {
   interface TechIcon {
+    id: number;
     name: string;
     icon: JSX.Element;
   }
 
   const techIcons: TechIcon[] = [
-    { name: "React", icon: <FaReact size={50} /> },
-    { name: "Next.js", icon: <SiNextdotjs size={50} /> },
-    { name: "Node.js", icon: <FaNodeJs size={50} /> },
-    { name: "Tailwind CSS", icon: <RiTailwindCssFill size={50} /> },
-    { name: "Git", icon: <FaGit size={50} /> },
-    { name: "Webpack", icon: <SiWebpack size={50} /> },
+    { id: 1, name: "React", icon: <FaReact size={50} /> },
+    { id: 2, name: "Next.js", icon: <SiNextdotjs size={50} /> },
+    { id: 3, name: "Node.js", icon: <FaNodeJs size={50} /> },
+    { id: 4, name: "Tailwind CSS", icon: <RiTailwindCssFill size={50} /> },
+    { id: 5, name: "Git", icon: <FaGit size={50} /> },
+    { id: 6, name: "Webpack", icon: <SiWebpack size={50} /> },
   ];
 
   return (
@@ -65,12 +66,12 @@ export default function Technologies() {
           1300: {
             slidesPerView: 5,
             spaceBetween: 20,
-          }
+          },
         }}
       >
         {techIcons.map((tech) => (
           <SwiperSlide
-            key={tech.name}
+            key={tech.id}
             className="flex justify-center items-center"
           >
             <div className="tech-card p-4 flex justify-center items-center">

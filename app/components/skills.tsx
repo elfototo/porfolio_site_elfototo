@@ -2,15 +2,9 @@ import { useTranslation } from "react-i18next";
 import type { JSX } from "react";
 import { FaTools } from "react-icons/fa";
 import { FaPaintBrush } from "react-icons/fa";
-import { SiFrontendmentor } from "react-icons/si";
 import { FaCheck } from "react-icons/fa";
-import { PiCodeBold } from "react-icons/pi";
 import { HiCode } from "react-icons/hi";
-import { TbPuzzleFilled } from "react-icons/tb";
 import { FaPuzzlePiece } from "react-icons/fa6";
-
-
-
 
 export default function Skills() {
   const { t } = useTranslation();

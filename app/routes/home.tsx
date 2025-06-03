@@ -1,7 +1,6 @@
 import type { Route } from "./+types/home";
 import Services from "../components/services";
 import MainButton from "../components/mainButton";
-import Technologies from "../components/technologies";
 import Projects from "../components/projects";
 import Skills from "../components/skills";
 import ParallaxIcon from "../components/parallaxIcon";
@@ -9,13 +8,12 @@ import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
+// export function meta({}: Route.MetaArgs) {
+//   return [
+//     { title: "New React Router App" },
+//     { name: "description", content: "Welcome to React Router!" },
+//   ];
+// }
 
 export default function Home() {
   const { t } = useTranslation();
@@ -361,17 +359,23 @@ export default function Home() {
               <h1 className="text-white text-5xl font-inter-bold mb-10 mx-auto">
                 {t("contacts.title")}
               </h1>
-              
             </div>
 
             <div className="flex gap-4 flex-wrap items-center justify-center">
               <div className="bg-black  cursor-pointer rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
                 <FaGithub />
-                <a href="https://github.com/elfototo" target="_blank">GitHub</a>
+                <a href="https://github.com/elfototo" target="_blank">
+                  GitHub
+                </a>
               </div>
               <div className="bg-blue-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
                 <FaLinkedinIn />
-                <a href="https://www.linkedin.com/in/elizaveta-davydova/" target="_blank">LinkedIn</a>
+                <a
+                  href="https://www.linkedin.com/in/elizaveta-davydova/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
               </div>
               {/* <div className="bg-cyan-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
                 <BsTelegram />
