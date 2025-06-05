@@ -78,9 +78,10 @@ export default function Component() {
         </ul>
 
         {menuOpen && (
-          <div className="flex relative">
+          <div className="flex relative items-center">
+            {/* divide-y divide-gray-300 */}
             <ul
-              className={`fixed top-0 right-0 h-screen w-3/4 md:hidden flex flex-col gap-4 px-8 pb-8 pt-4 bg-white shadow-md z-50 text-xl divide-y divide-gray-300 transition transition-transform duration-700 ease-in-out ${
+              className={`fixed top-0 right-0 h-screen w-full md:hidden flex flex-col item-center justify-center gap-8 pl-[20%]  pb-8 bg-white shadow-md z-50 text-2xl transition transition-transform duration-700 ease-in-out ${
                 menuOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
@@ -89,7 +90,7 @@ export default function Component() {
                   <Link
                     to={link.to}
                     onClick={() => setMenuOpen(false)}
-                    className={`block hover:text-yellow-500 font-inter-extraBold transition duration-300 py-5 ${
+                    className={`block hover:text-yellow-500 font-inter-regular transition duration-300 ${
                       location.pathname === link.to ? "text-yellow-500" : ""
                     }`}
                   >
@@ -111,23 +112,6 @@ export default function Component() {
             </button>
           </div>
         )}
-
-        {/* <nav className="container max-w-[1200px] mx-auto px-8 py-8 flex justify-center items-center">
-          <ul className="flex gap-6">
-            {navLinks.map((link) => (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  className={`hover:text-yellow-500 font-inter-extraBold transition duration-500 ease-in-out ${
-                    location.pathname === link.to ? "text-yellow-500" : ""
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav> */}
       </header>
 
       {/* Контент */}
