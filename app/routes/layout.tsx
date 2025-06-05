@@ -80,7 +80,7 @@ export default function Component() {
         {menuOpen && (
           <div className="flex relative">
             <ul
-              className={`fixed top-0 right-0 h-screen w-3/4 md:hidden flex flex-col gap-4 px-8 pb-8 pt-4 bg-white shadow-md z-50 text-2xl divide-y divide-gray-300 transition transition-transform duration-700 ease-in-out ${
+              className={`fixed top-0 right-0 h-screen w-3/4 md:hidden flex flex-col gap-4 px-8 pb-8 pt-4 bg-white shadow-md z-50 text-xl divide-y divide-gray-300 transition transition-transform duration-700 ease-in-out ${
                 menuOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
@@ -102,7 +102,7 @@ export default function Component() {
               <LanguageSwitcheMobiler />
             </div>
             <button
-              className={`fixed top-5 right-5 z-99 ${
+              className={`fixed top-2 right-2 z-99 ${
                 menuOpen ? "block" : "hidden"
               }`}
               onClick={toggleMenu}
