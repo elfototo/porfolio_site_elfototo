@@ -121,7 +121,7 @@ export default function Component() {
 
       {/* Футер */}
       <footer className="bg-gray-100 text-center py-4 text-sm text-gray-500">
-        © {new Date().getFullYear()} My Name. All rights reserved.
+        © {new Date().getFullYear()} {t("footer.name")}. All rights reserved.
       </footer>
     </div>
   );

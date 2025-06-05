@@ -4,9 +4,12 @@ import MainButton from "../components/mainButton";
 import Projects from "../components/projects";
 import Skills from "../components/skills";
 import ParallaxIcon from "../components/parallaxIcon";
+import ContactForm from "../components/contactForm";
 import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { BsTelegram } from "react-icons/bs";
+import { IoMail } from "react-icons/io5";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -355,36 +358,98 @@ export default function Home() {
         <div className="relative bg-[#334155] w-full h-full relative z-10">
           {/* Content */}
           <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
+            {/* <div className="w-[25%] relative h-auto">
+              <img
+                src="/form.webp"
+                alt="image"
+                className="w-full h-auto absolute bottom-0 lg:left-20 object-cover lg:block hidden"
+              />
+            </div> */}
             <div className="w-full mb-4 mx-auto flex items-center">
               <h1 className="text-white text-5xl font-inter-bold mb-10 mx-auto">
                 {t("contacts.title")}
               </h1>
             </div>
+            <div className="flex gap-6 items-center">
+              <div className="lg:w-[75%] w-full pb-10">
+                <ContactForm />
+              </div>
 
-            <div className="flex gap-4 flex-wrap items-center justify-center">
-              <div className="bg-black  cursor-pointer rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
-                <FaGithub />
-                <a href="https://github.com/elfototo" target="_blank">
-                  GitHub
-                </a>
+              <div className="flex flex-col">
+                {/* text */}
+                <div className="max-w-md mx-auto mb-4">
+                  <h2 className="text-white text-2xl font-inter-extraBold mb-4">
+                    Оставьте сообщение
+                  </h2>
+                  <p className="text-white text-md">
+                    Если у вас есть вопросы или предложения, заполните форму , и
+                    я с радостью свяжусь с вами.
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center w-[80%]">
+                  
+                  <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
+
+                  {/* contact */}
+                  <div className="flex  gap-4 flex-wrap ">
+                    <div className="relative flex group items-center">
+                      <div className="z-0 border solid absolute -left-[5px] border-white w-[60px] h-[60px] rounded-full transition duration-300 hidden group-hover:block"></div>
+                      <a
+                        href="https://github.com/elfototo"
+                        className="z-10"
+                        target="_blank"
+                      >
+                        <div className="flex items-center">
+                          <div className="bg-black cursor-pointer  text-white flex justify-center items-center p-4 z-10 rounded-full h-[50px] w-[50px] items-center justify-center  ">
+                            <FaGithub />
+                          </div>
+                          {/* <p className="ml-4 transition duration-300 n">
+          GitHub
+        </p> */}
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative flex group items-center">
+                      <div className="z-0 border solid absolute -left-[5px] border-white w-[60px] h-[60px] rounded-full transition duration-300 hidden group-hover:block"></div>
+                      <a
+                        href="https://www.linkedin.com/in/elizaveta-davydova/"
+                        className="z-10"
+                        target="_blank"
+                      >
+                        <div className="flex items-center">
+                          <div className="bg-blue-500 cursor-pointer  text-white flex justify-center items-center p-4 z-10 rounded-full h-[50px] w-[50px] items-center justify-center  ">
+                            <FaLinkedinIn />
+                          </div>
+                          {/* <p className="ml-4 transition duration-300 ">
+          LinkedIn
+        </p> */}
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="relative flex group items-center">
+                      <div className="z-0 border solid absolute -left-[5px] border-white w-[60px] h-[60px] rounded-full transition duration-300 hidden group-hover:block"></div>
+                      <a
+                        href="https://t.me/Lizio"
+                        className="z-10"
+                        target="_blank"
+                      >
+                        <div className="flex items-center">
+                          <div className="bg-cyan-500 cursor-pointer  text-white flex justify-center items-center p-4 z-10 rounded-full h-[50px] w-[50px] items-center justify-center  ">
+                            <BsTelegram />
+                          </div>
+                          {/* <p className="ml-4 transition duration-300 ">
+          Telegram
+        </p> */}
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="w-full h-[1px] bg-gray-300 mt-4 mb-10"></div>
+                </div>
               </div>
-              <div className="bg-blue-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
-                <FaLinkedinIn />
-                <a
-                  href="https://www.linkedin.com/in/elizaveta-davydova/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-              </div>
-              {/* <div className="bg-cyan-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
-                <BsTelegram />
-                <a>Telegram</a>
-              </div>
-              <div className="bg-red-500 cursor-pointer  rounded-lg text-white flex justify-center items-center px-4 h-[30px] gap-2">
-                <IoMail />
-                <a>Mail</a>
-              </div> */}
             </div>
           </div>
         </div>
