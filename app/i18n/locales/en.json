@@ -97,6 +97,15 @@
     "language": {
         "switch": "Switch Language"
     },
+    "form": {
+        "message": "Thank you! Your message has been sent.",
+        "mail": "Enter your email",
+        "input-message": "Message",
+        "submitting-true": "Sending...",
+        "submitting-false": "Send",
+        "text-title": "Leave a Message",
+        "text-content": "If you have any questions or suggestions, fill out the form and I’ll be happy to get in touch with you."
+    },
     "footer": {
         "name": "Elizaveta Davydova"
     }

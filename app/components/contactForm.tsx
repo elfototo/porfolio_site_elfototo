@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion"; // Импортируем framer-motion
+import { useTranslation } from "react-i18next";
+
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("mwpbpyek");
@@ -10,25 +12,19 @@ const ContactForm: React.FC = () => {
     message: "",
   });
 
-  // Сразу очищаем форму при отправке
   useEffect(() => {
-    if (state.succeeded) {
-      setShowMessage(true); // Показываем сообщение
-      setFormData({
-        email: "",
-        message: "",
-      });
+    if (!state.submitting && state.succeeded) {
+      setShowMessage(true);
+      setFormData({ email: "", message: "" });
 
-      // Таймер, чтобы сообщение исчезло через 5 секунд
       const timer = setTimeout(() => {
-        setShowMessage(false); // Скрываем сообщение через 5 секунд
+        setShowMessage(false);
       }, 5000);
 
-      return () => clearTimeout(timer); // Очистить таймер, если компонент удаляется
+      return () => clearTimeout(timer);
     }
-  }, [state.succeeded]); // После успешной отправки
+  }, [state.submitting, state.succeeded]);
 
-  // Анимация появления для сообщения об успешной отправке
   const successMessageVariants = {
     hidden: { opacity: 0, x: 100 },
     visible: { opacity: 1, x: 0 },
@@ -41,9 +37,12 @@ const ContactForm: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const { t } = useTranslation();
+
+
   return (
     <>
-      {/* Сообщение об успешной отправке */}
+      
       {showMessage && (
         <motion.div
           className="fixed top-5 right-5 text-center bg-white flex justify-between items-center shadow-lg rounded-lg overflow-hidden"
@@ -56,7 +55,7 @@ const ContactForm: React.FC = () => {
           <div className="w-[10px] h-[100px] bg-green-500 z-10"></div>
 
           <p className="text-green-500 pl-4 pr-4">
-            Спасибо! Сообщение отправлено.
+            {t("form.message")}
           </p>
           {/* Кнопка закрытия сообщения */}
           <button
@@ -80,7 +79,7 @@ const ContactForm: React.FC = () => {
       >
         <div>
           <label htmlFor="email" className="block text-sm text-gray-700">
-            Укажите ваш email
+            {t("form.mail")}
           </label>
           <input
             id="email"
@@ -96,7 +95,7 @@ const ContactForm: React.FC = () => {
 
         <div>
           <label htmlFor="message" className="block text-sm text-gray-700">
-            Сообщение
+            {t("form.input-message")}
           </label>
           <textarea
             id="message"
@@ -119,7 +118,7 @@ const ContactForm: React.FC = () => {
           disabled={state.submitting}
           className="w-full py-2 px-4 bg-yellow-500 text-white rounded-md hover:bg-yellow-400 disabled:opacity-50"
         >
-          {state.submitting ? "Отправка..." : "Отправить"}
+          {state.submitting ? t("form.submitting-true") : t("form.submitting-false")}
         </button>
       </motion.form>
     </>

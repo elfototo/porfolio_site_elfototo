@@ -379,16 +379,12 @@ export default function Home() {
                 {/* text */}
                 <div className="max-w-md mx-auto mb-4">
                   <h2 className="text-white text-2xl font-inter-extraBold mb-4">
-                    Оставьте сообщение
+                    {t("form.text-title")}
                   </h2>
-                  <p className="text-white text-md">
-                    Если у вас есть вопросы или предложения, заполните форму , и
-                    я с радостью свяжусь с вами.
-                  </p>
+                  <p className="text-white text-md">{t("form.text-content")}</p>
                 </div>
 
                 <div className="flex flex-col items-center w-[80%]">
-                  
                   <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
 
                   {/* contact */}
@@ -404,9 +400,6 @@ export default function Home() {
                           <div className="bg-black cursor-pointer  text-white flex justify-center items-center p-4 z-10 rounded-full h-[50px] w-[50px] items-center justify-center  ">
                             <FaGithub />
                           </div>
-                          {/* <p className="ml-4 transition duration-300 n">
-          GitHub
-        </p> */}
                         </div>
                       </a>
                     </div>
@@ -422,9 +415,6 @@ export default function Home() {
                           <div className="bg-blue-500 cursor-pointer  text-white flex justify-center items-center p-4 z-10 rounded-full h-[50px] w-[50px] items-center justify-center  ">
                             <FaLinkedinIn />
                           </div>
-                          {/* <p className="ml-4 transition duration-300 ">
-          LinkedIn
-        </p> */}
                         </div>
                       </a>
                     </div>
@@ -440,9 +430,6 @@ export default function Home() {
                           <div className="bg-cyan-500 cursor-pointer  text-white flex justify-center items-center p-4 z-10 rounded-full h-[50px] w-[50px] items-center justify-center  ">
                             <BsTelegram />
                           </div>
-                          {/* <p className="ml-4 transition duration-300 ">
-          Telegram
-        </p> */}
                         </div>
                       </a>
                     </div>
