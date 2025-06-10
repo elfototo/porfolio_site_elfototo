@@ -10,7 +10,7 @@ export function LanguageSwitcher() {
 
   return (
     <div className="relative">
-      <button className="fixed z-99 w-[50px] h-[50px] top-5 left-4 cursor-pointer font-bold bg-yellow-500 rounded-full py-2 px-1 hover:scale-105 transition duration-300 hover:text-white text-white" onClick={toggleLanguage}>
+      <button className="fixed z-99 w-[50px] h-[50px] md:top-5 top-4 left-4 cursor-pointer font-bold bg-yellow-500 rounded-full py-2 px-1 hover:scale-105 transition duration-300 hover:text-white text-white" onClick={toggleLanguage}>
         {i18n.language === "en" ? "RU" : "EN"}
       </button>
     </div>

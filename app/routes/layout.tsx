@@ -27,7 +27,7 @@ export default function Component() {
 
   return (
     <div className="flex flex-col bg-white text-gray-600 relative w-full min-h-screen overflow-x-hidden font-inter-regular text-md">
-      <div className="hidden md:block">
+      <div className="">
         <LanguageSwitcher />
       </div>
       <div>
@@ -51,14 +51,14 @@ export default function Component() {
       <header className="text-lg relative z-20">
         {/* Mobile */}
         <button
-          className="md:hidden block text-3xl absolute top-5 right-5"
+          className="md:hidden block text-3xl absolute top-6 right-5"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
           <div className="gap-2 flex flex-col">
-            <div className="bg-gray-500 w-8 h-1 rounded-full"></div>
-            <div className="bg-gray-500 w-8 h-1 rounded-full"></div>
-            <div className="bg-gray-500 w-8 h-1 rounded-full"></div>
+            <div className="bg-gray-500 w-[40px] h-1 rounded-full"></div>
+            <div className="bg-gray-500 w-[40px] h-1 rounded-full"></div>
+            <div className="bg-gray-500 w-[20px] h-1 rounded-full"></div>
           </div>
         </button>
 
@@ -99,9 +99,9 @@ export default function Component() {
                 </li>
               ))}
             </ul>
-            <div className="fixed z-99 bottom-5 right-5">
+            {/* <div className="fixed z-99 bottom-5 right-5">
               <LanguageSwitcheMobiler />
-            </div>
+            </div> */}
             <button
               className={`fixed top-2 right-2 z-99 ${
                 menuOpen ? "block" : "hidden"
