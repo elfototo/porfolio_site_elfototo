@@ -78,7 +78,7 @@ export default function ProjectCard({ id }: { id: number }) {
             className="w-[150px] h-auto mb-2"
           />
 
-          <p className="text-sm mb-2">{currentProject?.content}</p>
+          <p className="text-md font-inter-light mb-2">{currentProject?.content}</p>
           <div className="flex flex-wrap gap-4">
             <div className="bg-black rounded-lg text-white flex justify-center items-center px-4 py-1 gap-2">
               <FaGithub />
