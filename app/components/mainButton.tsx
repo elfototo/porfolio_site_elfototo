@@ -18,11 +18,11 @@ export default function MainButton({
     <>
       <button
         onClick={onClick}
-        className={`h-auto py-4 px-10 cursor-pointer ${
+        className={`h-auto py-4 w-full cursor-pointer ${
           isMain
             ? "bg-yellow-500 text-white"
             : "bg-white border border-solid border-yellow-500 text-yellow-500"
-        } hover:scale-103 font-inter-semiBold rounded-lg mr-4 transition duration-300`}
+        } hover:scale-103 font-inter-semiBold rounded-lg transition duration-300`}
       >
         {value}
       </button>

@@ -81,7 +81,7 @@ export default function Home() {
             {t("main.name.part1")}
             {t("main.name.name")}
           </h2>
-          <div className="flex">
+          <div className="w-full flex gap-4">
             <MainButton
               onClick={handleDownload}
               value={t("main.downloadCV")}
@@ -113,7 +113,7 @@ export default function Home() {
             <span className="">{t("main.name.name")}</span>
             {t("main.name.part2")}
           </p>
-          <div className="ml-[3px] flex flex-wrap">
+          <div className="ml-[3px] w-full flex gap-4">
             <MainButton
               onClick={handleDownload}
               value={t("main.downloadCV")}
