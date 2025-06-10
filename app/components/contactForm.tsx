@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
       
       {showMessage && (
         <motion.div
-          className="fixed top-5 right-5 text-center bg-white flex justify-between items-center shadow-lg rounded-lg overflow-hidden"
+          className="fixed z-99 top-5 right-5 text-center bg-white flex justify-between items-center shadow-lg rounded-lg overflow-hidden"
           initial="hidden"
           animate="visible"
           exit="hidden"
