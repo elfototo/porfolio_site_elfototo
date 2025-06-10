@@ -29,9 +29,9 @@ export default function Contacts() {
           </div>
 
           <div className="flex flex-col items-center lg:items-start lg:w-[80%] w-full lg:order-2 order-1 lg:mb-0 mb-10">
-            <div className="bg-gray-300 w-full h-[2px] mb-10 lg:hidden block"></div>
+            <div className="bg-gray-300 w-full h-[1px] mb-10 lg:hidden block"></div>
             <SocialContacts />
-            <div className="bg-gray-300 w-full h-[2px] mt-10 lg:hidden block"></div>
+            <div className="bg-gray-300 w-full h-[1px] mt-10 lg:hidden block"></div>
 
           </div>
         </div>

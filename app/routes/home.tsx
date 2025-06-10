@@ -16,6 +16,35 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const handleDownload = () => {
+    const currentLang = i18n.language;
+    const fileName = currentLang === "ru" ? "CV_rus.pdf" : "CV_eng.pdf";
+
+    fetch(`/${fileName}`)
+      .then((res) => res.blob())
+      .then((blob) => {
+        const blobUrl = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = blobUrl;
+        link.setAttribute("download", fileName);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(blobUrl); // очищаем память
+      })
+      .catch((err) => {
+        console.error("Download failed:", err);
+      });
+  };
+
+  const handleToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -52,7 +81,18 @@ export default function Home() {
             {t("main.name.part1")}
             {t("main.name.name")}
           </h2>
-          <MainButton value={t("main.downloadCV")} />
+          <div className="flex">
+            <MainButton
+              onClick={handleDownload}
+              value={t("main.downloadCV")}
+              isMain={true}
+            />
+            <MainButton
+              onClick={handleToContact}
+              value={t("main.write")}
+              isMain={false}
+            />
+          </div>
         </div>
 
         {/* Deckstop */}
@@ -73,8 +113,17 @@ export default function Home() {
             <span className="">{t("main.name.name")}</span>
             {t("main.name.part2")}
           </p>
-          <div className="ml-[3px]">
-            <MainButton value={t("main.downloadCV")} />
+          <div className="ml-[3px] flex flex-wrap">
+            <MainButton
+              onClick={handleDownload}
+              value={t("main.downloadCV")}
+              isMain={true}
+            />
+            <MainButton
+              onClick={handleToContact}
+              value={t("main.write")}
+              isMain={false}
+            />
           </div>
         </div>
 
@@ -354,8 +403,7 @@ export default function Home() {
         <div className="relative bg-[#334155] w-full h-full relative z-10">
           {/* Content */}
           <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
-           
-            <Contacts/>
+            <Contacts />
           </div>
         </div>
       </div>
