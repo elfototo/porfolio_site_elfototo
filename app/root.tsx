@@ -31,6 +31,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Elizaveta Davydova" />
+        <meta property="og:description" content="Website-portfolio" />
+        <meta property="og:image" content="/services_4.webp" />
         <Meta />
         <Links />
       </head>
