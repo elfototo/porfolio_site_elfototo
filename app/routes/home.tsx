@@ -400,7 +400,7 @@ export default function Home() {
         </div>
 
         {/* Border up*/}
-        <div className="relative bg-[#334155] w-full h-full relative z-10">
+        <div className="bg-[#334155] w-full h-full relative z-10">
           {/* Content */}
           <div className="container max-w-[1200px] px-4 py-10 mx-auto flex flex-wrap justify-center items-center h-full">
             <Contacts />
