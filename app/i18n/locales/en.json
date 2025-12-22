@@ -47,7 +47,7 @@
       "approach": [
         "Responsive Design",
         "Web Performance Optimization",
-        "Telegram Web Apps API",
+        "Telegram Web Apps",
         "API Integration"
       ],
       "design": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
@@ -58,15 +58,15 @@
     "list": [
       {
         "title": "Web Application Development",
-        "content": "I build frontend solutions for web applications using React and Next.js, with API integration and state management."
+        "content": "I build Frontend solutions for web applications using React and Next.js, with API integration and state management."
       },
       {
         "title": "UI Development & Responsive Layouts",
         "content": "I design user interfaces that are pleasant to use — from small smartphones to wide desktop screens."
       },
       {
-        "title": "Telegram Mini Apps",
-        "content": "I create web interfaces for Telegram that seamlessly integrate into the messenger’s ecosystem."
+        "title": "Telegram Web Apps",
+        "content": "I create web applications for Telegram that seamlessly integrate into the messenger’s ecosystem."
       },
       {
         "title": "Optimization & Refactoring",
