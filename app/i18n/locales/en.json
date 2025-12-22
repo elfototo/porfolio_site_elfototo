@@ -1,113 +1,113 @@
 {
-    "navigation": {
-        "home": "Home",
-        "about": "About",
-        "skills": "Skills",
-        "services": "Services",
-        "projects": "Projects",
-        "contact": "Contact"
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "main": {
+    "greeting": "Hello, I'm a ",
+    "titleHighlight": {
+      "part1": "Frontend ",
+      "part2": "developer."
     },
-    "main": {
-        "greeting": "Hello, I'm a ",
-        "titleHighlight": {
-            "part1": "Frontend ",
-            "part2": "developer."
-        },
-        "name": {
-            "part1": "My name is ",
-            "name": "Elizaveta Davydova",
-            "part2": ". Welcome to my website. Here I'm posting my experience and last projects."
-        },
-        "downloadCV": "Download CV",
-        "write": "Contact me"
+    "name": {
+      "part1": "My name is ",
+      "name": "Elizaveta Davydova",
+      "part2": ". Welcome to my website. Here I'm posting my experience and last projects."
     },
-    "about": {
-        "title": "About me",
-        "text": "Frontend Developer with experience in React, Next.js, and modern CSS frameworks such as Tailwind CSS. My background in design allows me to effectively integrate visual and technical solutions, providing a comprehensive approach to development."
+    "downloadCV": "Download CV",
+    "write": "Contact me"
+  },
+  "about": {
+    "title": "About me",
+    "text": "Frontend Developer with experience in React, Next.js, and modern CSS frameworks such as Tailwind CSS. My background in design allows me to effectively integrate visual and technical solutions, providing a comprehensive approach to development."
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend Stack",
+      "tools": "Tools & Practices",
+      "design": "UI / UX & Design",
+      "approach": "Approach"
     },
-    "skills": {
-        "title": "Skills",
-        "categories": {
-            "frontend": "Frontend Stack",
-            "tools": "Tools & Practices",
-            "design": "UI / UX & Design",
-            "approach": "Approach"
-        },
-        "list": {
-            "frontend": [
-                "React",
-                "Next.js",
-                "TypeScript",
-                "JavaScript",
-                "HTML5",
-                "CSS3",
-                "Tailwind CSS"
-            ],
-            "tools": [
-                "Git",
-                "Docker",
-                "SWR",
-                "Context API"
-            ],
-            "approach": [
-                "Responsive Design",
-                "Web Performance Optimization",
-                "API Integration"
-            ],
-            "design": [
-                "Figma",
-                "Adobe Photoshop",
-                "Adobe Illustrator"
-            ]
-        }
-    },
-    "services": {
-        "title": "Services",
-        "list": [
-            {
-                "title": "Interface Development",
-                "content": "Building responsive web apps using React/Next.js/React Router and API integration"
-            },
-            {
-                "title": "Code Optimization",
-                "content": "Improving performance, removing duplication, and enhancing code readability"
-            },
-            {
-                "title": "Responsive Design",
-                "content": "Creating designs that look great on all devices"
-            },
-            {
-                "title": "Landing Pages",
-                "content": "Building effective and modern landing pages"
-            }
-        ]
-    },
-    "technologies": {
-        "title": "Technologies"
-    },
-    "projects": {
-        "title": "Projects",
-        "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
-        "button": "Visit website"
-    },
-    "contacts": {
-        "title": "Contacts",
-        "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
-        "button": "Visit website"
-    },
-    "language": {
-        "switch": "Switch Language"
-    },
-    "form": {
-        "message": "Thank you! Your message has been sent.",
-        "mail": "Enter your email",
-        "input-message": "Message",
-        "submitting-true": "Sending...",
-        "submitting-false": "Send",
-        "text-title": "Leave a Message",
-        "text-content": "If you have any questions or suggestions, fill out the form and I’ll be happy to get in touch with you."
-    },
-    "footer": {
-        "name": "Elizaveta Davydova"
+    "list": {
+      "frontend": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ],
+      "tools": ["Git", "Docker", "SWR", "Redux", "Context API"],
+      "approach": [
+        "Responsive Design",
+        "Web Performance Optimization",
+        "Telegram Web Apps API",
+        "API Integration"
+      ],
+      "design": ["Figma", "Adobe Photoshop", "Adobe Illustrator"]
     }
+  },
+  "services": {
+    "title": "Services",
+    "list": [
+      {
+        "title": "Web Application Development",
+        "content": "I build frontend solutions for web applications using React and Next.js, with API integration and state management."
+      },
+      {
+        "title": "UI Development & Responsive Layouts",
+        "content": "I design user interfaces that are pleasant to use — from small smartphones to wide desktop screens."
+      },
+      {
+        "title": "Telegram Mini Apps",
+        "content": "I create web interfaces for Telegram that seamlessly integrate into the messenger’s ecosystem."
+      },
+      {
+        "title": "Optimization & Refactoring",
+        "content": "I improve page load performance, reduce unnecessary requests, and transform complex code into a clean, maintainable architecture."
+      },
+      {
+        "title": "Landing Pages & Promo Websites",
+        "content": "I build landing pages that not only look great but also effectively convert visitors."
+      },
+      {
+        "title": "Project Maintenance & Enhancements",
+        "content": "I add new features, fix bugs, and improve existing web applications."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
+    "button": "Visit website"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
+    "button": "Visit website"
+  },
+  "language": {
+    "switch": "Switch Language"
+  },
+  "form": {
+    "message": "Thank you! Your message has been sent.",
+    "mail": "Enter your email",
+    "input-message": "Message",
+    "submitting-true": "Sending...",
+    "submitting-false": "Send",
+    "text-title": "Leave a Message",
+    "text-content": "If you have any questions or suggestions, fill out the form and I’ll be happy to get in touch with you."
+  },
+  "footer": {
+    "name": "Elizaveta Davydova"
+  }
 }
