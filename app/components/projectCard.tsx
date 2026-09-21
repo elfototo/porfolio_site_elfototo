@@ -1,30 +1,30 @@
 // icons
-import { FaReact } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { FaGlobe } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 import { useTranslation } from "react-i18next";
 
-import type { JSX } from "react";
+type Project = {
+  id: number;
+  title: string;
+  content: string;
+  button: string;
+  github: string;
+  website: string;
+  image: string;
+  tech: string[];
+};
 
 export default function ProjectCard({ id }: { id: number }) {
   const { t } = useTranslation();
 
-  interface Projects {
-    id: number;
-    title: string;
-    content: string;
-    github: string;
-    website: string;
-    tech: string[];
-  }
-
-  const projects: Projects[] = [
+  const projects: Project[] = [
     {
       id: 1,
-      title: t("projects.title"),
-      content: t("projects.content"),
+      title: t("projects.davai.title"),
+      content: t("projects.davai.content"),
+      button: t("projects.davai.button"),
       github: "https://github.com/elfototo/davai-s-nami",
+      image: "/public/portfolio_1.webp",
       website: "https://davai-s-nami.vercel.app/",
       tech: [
         "React",
@@ -34,77 +34,112 @@ export default function ProjectCard({ id }: { id: number }) {
         "Docker",
         "Vercel",
         "Telegram Web Apps",
-        "Tailwind Css",
+        "Tailwind CSS",
+      ],
+    },
+
+    {
+      id: 2,
+      title: t("projects.baton.title"),
+      content: t("projects.baton.content"),
+      button: t("projects.baton.button"),
+      github: "https://github.com/elfototo/baton",
+      website: "https://www.figma.com/community/plugin/1676909519117615210",
+      image: "/baton-project.webp",
+      tech: [
+        "TypeScript",
+
+        "Preact",
+
+        "Tailwind CSS",
+
+        "Figma Plugin API",
+
+        "Vitest",
       ],
     },
   ];
 
-  const currentProject: Projects | undefined = projects.find(
-    (item) => item.id === id
-  );
+  const currentProject = projects.find((item) => item.id === id);
+
+  if (!currentProject) {
+    return null;
+  }
+
   return (
-    <>
-      <div className="h-auto flex flex-col md:flex-row w-full mx-auto border border-gray-200 shadow-lg rounded-xl overflow-hidden">
+    <div className="mx-auto flex h-auto w-full flex-col overflow-hidden rounded-xl border border-gray-200 shadow-lg md:flex-row">
+      {/* Desktop image */}
+      <div
+        className="relative hidden min-w-[45%] items-end md:block"
+        style={{
+          clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)",
+          background:
+            "linear-gradient(90deg, rgba(78,19,179,1) 9%, rgba(245,45,133,1) 100%)",
+        }}
+      >
         <div
-          className="hidden md:block relative flex items-end min-w-[45%]"
+          className="absolute inset-0 z-0 h-full w-full bg-cover bg-center"
           style={{
-            clipPath: "polygon(0 0, 100% 0, 85% 100%, 0% 100%)",
-            background:
-              "linear-gradient(90deg, rgba(78,19,179,1) 9%, rgba(245,45,133,1) 100%)",
+            backgroundImage: `url(${currentProject.image})`,
           }}
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center z-0 left-0 bottom-0 w-full h-full"
-            style={{
-              backgroundImage: "url('/banner.webp')",
-            }}
-          ></div>
+        />
+      </div>
+
+      {/* Mobile image */}
+      <div className="block md:hidden">
+        <img
+          src={currentProject.image}
+          alt={currentProject.title}
+          loading="eager"
+          className="mb-2 h-auto w-full"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col justify-center p-10">
+        <h2 className="mb-3 text-2xl font-semibold">{currentProject.title}</h2>
+
+        <p className="mb-5 text-md font-inter-light">
+          {currentProject.content}
+        </p>
+
+        {/* Links */}
+        <div className="flex flex-wrap gap-4">
+          {/* GitHub */}
+          <a
+            href={currentProject.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 rounded-lg bg-black px-4 py-1 text-white transition-opacity hover:opacity-80"
+          >
+            <FaGithub />
+            <span>GitHub</span>
+          </a>
+
+          {/* Website */}
+          <a
+            href={currentProject.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 rounded-lg bg-fuchsia-500 px-4 py-1 text-white transition-opacity hover:opacity-80"
+          >
+            <FaGlobe />
+            <span>{currentProject.button}</span>
+          </a>
         </div>
 
-        {/* Mobile img */}
-        <div className="md:hidden block">
-          <img
-            src="portfolio_1.webp"
-            alt="portfolio image"
-            loading="eager"
-            className="w-full h-auto mb-2"
-          />
-        </div>
-
-        <div className="flex flex-col p-10 justify-center">
-          <img
-            src="logo_main.webp"
-            alt="portfolio image"
-            loading="eager"
-            className="w-[150px] h-auto mb-2"
-          />
-
-          <p className="text-md font-inter-light mb-2">{currentProject?.content}</p>
-          <div className="flex flex-wrap gap-4">
-            <div className="bg-black rounded-lg text-white flex justify-center items-center px-4 py-1 gap-2">
-              <FaGithub />
-              <a href={currentProject?.github}>GitHub</a>
+        {/* Technologies */}
+        <div className="mt-10 flex flex-wrap gap-2">
+          {currentProject.tech.map((item) => (
+            <div
+              key={item}
+              className="flex cursor-default items-center gap-2 rounded-full bg-gray-600 px-4 py-1 text-md text-white"
+            >
+              <span>{item}</span>
             </div>
-            <div className="bg-fuchsia-500 text-white flex justify-center items-center px-4 py-1 gap-2 rounded-lg">
-              <FaGlobe />
-              <a href={currentProject?.website} target="_blank">
-                {t("projects.button")}
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-2 mt-10">
-            {currentProject?.tech?.map((item) => (
-              <div
-                key={item}
-                className={`text-white text-md bg-gray-600 flex items-center gap-2 px-4 py-1 cursor-default rounded-full`}
-              >
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

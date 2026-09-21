@@ -84,11 +84,23 @@
   "technologies": {
     "title": "Технологии"
   },
+
   "projects": {
     "title": "Проекты",
-    "content": "Проект представляет собой фронтенд-сайт, разработанный с использованием Next.js. Он позволяет пользователям искать мероприятия в Санкт-Петербурге по категориям, дате и популярным локациям. Все мероприятия агрегируются на бэкенде и отображаются на сайте. Веб-сайт работает как веб-приложение и также доступен через Telegram-бота.",
-    "button": "Посетить сайт"
+
+    "davai": {
+      "title": "Давай с нами",
+      "content": "Frontend-сайт на Next.js, который позволяет искать мероприятия в Санкт-Петербурге по категориям, датам и популярным местам. Мероприятия собираются на backend и отображаются на сайте. Проект также доступен в формате Telegram Web App.",
+      "button": "Посмотреть сайт"
+    },
+
+    "baton": {
+      "title": "Baton — Figma to React",
+      "content": "Figma-плагин, который преобразует выбранные дизайны в код на React и Tailwind CSS. Baton анализирует слои Figma, нормализует их структуру, определяет взаимосвязи между элементами и генерирует переиспользуемые React-компоненты. Проект использует собственный pipeline для преобразования дизайна в код, типизированное промежуточное представление и обширный набор тестов на Vitest.",
+      "button": "Посмотреть проект"
+    }
   },
+
   "contacts": {
     "title": "Контакты",
     "content": "The project is a frontend website built using Next.js. It allows users to search for events in Saint Petersburg by category, date, and popular locations. All events are aggregated on the backend and displayed on the site. The website functions as a web application and is also accessible via a Telegram bot.",
