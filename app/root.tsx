@@ -14,7 +14,7 @@ import "./app.css";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
-   { rel: "icon", href: "/favicon.png", type: "image/png" },
+  { rel: "icon", href: "/favicon.png", type: "image/png" },
   {
     rel: "preconnect",
     href: "https://fonts.gstatic.com",
@@ -24,6 +24,10 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+];
+
+export const meta: Route.MetaFunction = () => [
+  { title: "Elizaveta — Frontend Developer" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -39,8 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <header>
-        </header>
+        <header></header>
         {children}
         <ScrollRestoration />
         <Scripts />
