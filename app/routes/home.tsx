@@ -56,6 +56,7 @@ export default function Home() {
         {/* bg img */}
         <img
           src={"/bg.webp"}
+          width={600}
           alt="bg"
           className="absolute z-0 xl:-top-[9%] lg:-top-[5%] -top-[4%] xl:-right-[15%] lg:-right-[10%] -right-[13%] opacity-100 xl:w-[1000px] lg:w-[800px] w-[600px]"
         />
@@ -131,6 +132,7 @@ export default function Home() {
           <img
             src="/main_photo.webp"
             alt="Background image"
+            width={600}
             loading="eager"
             className="object-contain absolute -bottom-[2.5rem] lg:bottom-0 lg:-right-0 xl:right-0 w-full lg:h-[37rem] h-[32rem] z-0"
           />

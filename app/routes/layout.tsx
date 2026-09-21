@@ -2,7 +2,7 @@ import { Link, Outlet, useLocation } from "react-router";
 // import "swiper/css/bundle";
 import "../app.css";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { LanguageSwitcheMobiler } from "../components/LanguageSwitcher";
 import { IoCloseOutline } from "react-icons/io5";
@@ -62,14 +62,12 @@ export default function Component() {
           </div>
         </button>
 
-        <ul className="hidden md:flex gap-6 container max-w-[1200px] mx-auto px-8 py-8 flex justify-center  items-center z-99">
+        <ul className="hidden md:flex gap-6 container max-w-[1200px] mx-auto px-8 py-8 justify-center items-center">
           {navLinks.map((link) => (
             <li key={link.to}>
               <Link
                 to={link.to}
-                className={`hover:text-yellow-500 font-inter-extraBold transition duration-500 ease-in-out ${
-                  location.pathname === link.to ? "text-yellow-500" : ""
-                }`}
+                className="hover:text-yellow-500 font-inter-extraBold transition duration-500"
               >
                 {link.label}
               </Link>
@@ -81,7 +79,7 @@ export default function Component() {
           <div className="flex relative items-center">
             {/* divide-y divide-gray-300 */}
             <ul
-              className={`fixed top-0 right-0 h-screen w-full md:hidden flex flex-col item-center justify-center gap-8 pl-[20%]  pb-8 bg-white shadow-md z-50 text-2xl transition transition-transform duration-700 ease-in-out ${
+              className={`fixed top-0 right-0 h-screen w-full md:hidden flex flex-col item-center justify-center gap-8 pl-[20%]  pb-8 bg-white shadow-md z-50 text-2xl transition transition-transform duration-700 ease-in-out${
                 menuOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
@@ -90,7 +88,7 @@ export default function Component() {
                   <Link
                     to={link.to}
                     onClick={() => setMenuOpen(false)}
-                    className={`block hover:text-yellow-500 font-inter-regular transition duration-300 ${
+                    className={`block hover:text-yellow-500 font-inter-regular transition duration-300 ease-in-out ${
                       location.pathname === link.to ? "text-yellow-500" : ""
                     }`}
                   >
