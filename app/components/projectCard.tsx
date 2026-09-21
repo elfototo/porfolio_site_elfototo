@@ -24,7 +24,7 @@ export default function ProjectCard({ id }: { id: number }) {
       content: t("projects.davai.content"),
       button: t("projects.davai.button"),
       github: "https://github.com/elfototo/davai-s-nami",
-      image: "/public/portfolio_1.webp",
+      image: "/portfolio_1.webp",
       website: "https://davai-s-nami.vercel.app/",
       tech: [
         "React",
